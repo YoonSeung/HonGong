@@ -183,4 +183,5 @@ main() {
 
 
 	printf("%p = %p\n", array, array + 1);
+	printf("%P" , &pi);
 }
