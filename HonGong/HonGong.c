@@ -175,7 +175,7 @@
 	}
 }*/
 
-int main(void)
+/*nt main(void)
 {
 	int sum = 0;
 	int count = 0;
@@ -191,21 +191,29 @@ int main(void)
 		count++;
 	}
 	printf("최종값 : %d\n 횟수 : %d\n", sum, count);
-}
-
-
-
-
-
-//------------- 포인터 주소값 찾아보기 실습
-/*() {
-	int *array[4] = { 5,6,7,8 };
-
-	char *pi;
-
-
-
-
-	printf("%p = %p\n", array, array + 1);
-	printf("%p" , &pi);
 }*/
+
+/*
+//3의 배수 찍기 (단 9의 배수는 나오지 않게 하기) <continue의 활용>
+int main(void) {
+	int i;
+
+	for (i = 1; i <= 50; i++) {
+		if (i % 9 == 0)
+			continue;
+		if (i % 3 == 0)
+			printf("%d\n", i);
+	}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
