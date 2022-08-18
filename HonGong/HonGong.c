@@ -174,7 +174,31 @@
 
 	}
 }*/
-main() {
+
+int main(void)
+{
+	int sum = 0;
+	int count = 0;
+
+	for (int i = 1; i <= 100; i++)
+	{
+		if ((i % 3) == 0)
+		{
+			continue;
+		}
+		sum += i;
+		printf("%d\n", sum);
+		count++;
+	}
+	printf("최종값 : %d\n 횟수 : %d\n", sum, count);
+}
+
+
+
+
+
+//------------- 포인터 주소값 찾아보기 실습
+/*() {
 	int *array[4] = { 5,6,7,8 };
 
 	char *pi;
@@ -183,5 +207,5 @@ main() {
 
 
 	printf("%p = %p\n", array, array + 1);
-	printf("%P" , &pi);
-}
+	printf("%p" , &pi);
+}*/
