@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 
 /*int main(void) {
 	printf("%d\n", 10);
@@ -9,30 +10,18 @@
 
 	printf("%d과 %d의 합은 %d입니다.\n", 10, 20, 10 + 20);
 	printf("%.1lf - %.1lf = %.1lf\n", 3.4, 1.2, 3.4 - 1.2);
-}*/
+}
 
-/*int main(void) {
+int main(void) {
 	char frult[20] = "strawberry";
 	//frult = "banana"; 배열 선언 후 대입 연산자로 문자열 입력 못한다.
 
 	printf("딸기 : %s\n", frult);
 	strcpy(frult, "banana");
 	printf("딸기쨈 : %s %s\n", frult, "jam");
-}*/
+}
 
-/*int main(void) {
-	int Num = 629;
-	int *pi;
-	char test[100];
-
-	memset(test, 0xff, 100);
-
-	pi = &Num;
-	*pi = 1;
-	printf("Num값은 %d입니다.\n", *pi);
-}*/
-
-/*int main(void) {
+int main(void) {
 	int kor = 3;
 	int eng = 5;
 	int mat = 4;
@@ -53,9 +42,9 @@
 	}
 
 	printf("%d\n", res);
-}*/
+}
 
-/*int main(void) {
+int main(void) {
 	int kor = 3, eng = 5, mat = 4;
 	int credits;
 	int res;
@@ -67,9 +56,9 @@
 
 	res = (credits >= 10) && (grade > 4.0);
 	printf("%d\n", res);
-}*/
+}
 
-/*int main(void) {
+int main(void) {
 	int kg;
 	double cm, BMI;
 	
@@ -86,9 +75,9 @@
 	else {
 		printf("체중관리가 필요합니다.");
 	}
-}*/
+}
 
-/*int main(void) {
+int main(void) {
 	int age = 25, chest = 95;
 	char size;
 
@@ -116,9 +105,9 @@
 		
 	}
 	printf("사이즈는 %c입니다.\n", size);
-}*/
+}
 
-/*int main(void) {
+int main(void) {
 	int num1, num2, res;
 	char x;
 
@@ -150,9 +139,9 @@
 		}
 	else 
 		printf("'%%'는 사용 불가합니다.");
-}*/
+}
 
-/*int main(void) {
+int main(void) {
 	{
 		int input_number;
 		int i;
@@ -173,9 +162,9 @@
 		printf("%d",sum);
 
 	}
-}*/
+}
 
-/*nt main(void)
+nt main(void)
 {
 	int sum = 0;
 	int count = 0;
@@ -191,9 +180,9 @@
 		count++;
 	}
 	printf("최종값 : %d\n 횟수 : %d\n", sum, count);
-}*/
+}
 
-/*
+
 //3의 배수 찍기 (단 9의 배수는 나오지 않게 하기) <continue의 활용>
 int main(void) {
 	int i;
@@ -204,16 +193,125 @@ int main(void) {
 		if (i % 3 == 0)
 			printf("%d\n", i);
 	}
+}
+
+int sum(int x, int y);
+
+int main(void)
+{
+	int a = 10, b = 20;
+	int res;
+
+	res = sum(a, b);
+	printf("res : %d", res);
+
+}
+
+int sum(int x, int y)
+{
+	int temp;
+	temp = x + y;
+	return temp;
 }*/
 
+/*void change(int);
+void change2(int *);*/
 
 
+	/*
+	int a = 5;
+	int b = 15;
+	printf("1 before a val = %d a_ptr = %p\n", a,a);
+	printf("1 before a val = %d a_ptr = %p\n", &a,&a);
+	printf("1 before a val = %d a_ptr = %p\n", a, &a);
+	printf("1 before b val = %d b_ptr = %p\n", b,b);
+	printf("1 before b val = %d b_ptr = %p\n", &b,&b);
+	printf("1 before b val = %d b_ptr = %p\n", b, &b);
+	
 
+	change(a);
+	change2(&b);
+	printf("2 after a val = %d a_ptr : %p\n", a, a);
+	printf("2 after a val = %d a_ptr : %p\n", &a, &a);
+	printf("2 after b val = %d b_ptr : %p\n", b, b);
+	printf("2 after b val = %d b_ptr : %p\n", &b, &b);
+	
+}
 
+void change(int a) //깨달음 => 여기있는 a는 main에서 선언되어있는 a와 다르다. 그래서 main의 a값을 변경하려고 이 change 함수를 써봤자 main의 a값은 변경되지 않는다.
+{
+	a = 11;
+	printf("3 change a_ptr = %p\n", a);
+}
 
+void change2(int *a) { //하지만 이렇게 포인터로 주소값을 활용해 변경시키기 위해 사용할 수 있다. 여기 a도 main의 a와는 다르지만 
+	*a = 10;
+	printf("3 change2 a_ptr = %p\n", a);
+}*/
 
+/*double centi_to_meter(int a);
 
+int main(void)
+{
+	double res;
+	res = centi_to_meter(187);
+	printf("%.2lfm\n", res);
+}
 
+double centi_to_meter(int a)
+{
+	double temp;
 
+	temp = a / 100.0;
 
+	return temp;
+}
+*/
 
+/*int get_num(void);
+
+int main(void)
+{
+	int result;
+
+	result = get_num();
+	printf("반환값 : %d\n", result);
+}
+
+int get_num(void)
+{
+	int num;
+
+	printf("양수 입력 : ");
+	scanf("%d", &num);
+	
+	while (num < 0)
+	{
+		printf("양수를 입력하세요!\n");
+		printf("양수 입력 : ");
+		scanf("%d", &num);
+	}
+
+	return num;
+}
+*/
+
+/*int sum(int a);
+
+int main(void)
+{
+	sum(10);
+	sum(100);
+}
+
+int sum(int a)
+{
+	int sum_temp = 0;
+
+	for (int i = 1; i <= a ; i++)
+	{
+		sum_temp += i;
+		
+	}
+	printf("1부터 %d 까지 합은 %d입니다.\n", a, sum_temp);
+}*/
