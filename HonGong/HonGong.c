@@ -315,3 +315,11 @@ int sum(int a)
 	}
 	printf("1부터 %d 까지 합은 %d입니다.\n", a, sum_temp);
 }*/
+
+/*int main(void)
+{
+	char str[5];
+	str[0] = '0';
+	str[1] = 'k';
+	printf("%s\n", str);
+}*/
