@@ -324,7 +324,7 @@ int sum(int a)
 	printf("%s\n", str);
 }*/
 
-int main(void)
+/*int main(void)
 {
 	char small, cap = 'G';
 
@@ -334,4 +334,4 @@ int main(void)
 	}
 	printf("대문자 : %c %c", cap, '\n');
 	printf("소문자 : %c", small);
-}
+}*/

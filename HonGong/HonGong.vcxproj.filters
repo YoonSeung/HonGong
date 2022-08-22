@@ -27,5 +27,8 @@
     <ClCompile Include="프로그래머스.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="백준.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
