@@ -276,8 +276,8 @@ int main()
 	printf("ar => *ar = %d / (ar==&ar) = %p \n\n", *ar, ar);
 	for (i = 0; i < 5; i++)
 	{
-		printf("*ptr = %d       / ptr = %p		/ &ptr = %p\n", *ptr,		ptr,		&ptr);
-		printf("*ptr+1 = %d	/ ptr+1 = %p	/ &ptr+1 = %p\n\n", *ptr + 1,	ptr + 1,	&ptr + 1); 
+		printf("*ptr = %d       / ptr = %p		/ &ptr = %p\n",		*ptr,		ptr,		&ptr);
+		printf("*ptr+1 = %d		/ ptr+1 = %p	/ &ptr+1 = %p\n\n", *ptr + 1,	ptr + 1,	&ptr + 1); 
 		*ptr++; // == *ptr
 
 
