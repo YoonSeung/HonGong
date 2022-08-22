@@ -128,6 +128,7 @@
     </ClCompile>
     <ClCompile Include="Pointer.c" />
     <ClCompile Include="실전.c" />
+    <ClCompile Include="프로그래머스.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
