@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -335,3 +336,147 @@ int sum(int a)
 	printf("대문자 : %c %c", cap, '\n');
 	printf("소문자 : %c", small);
 }*/
+
+
+//int main(void)
+//{
+//	char str[80];
+//
+//	printf("문자열 입력 : ");
+//	scanf("%s", str);
+//	printf("첫 번째 단어 : %s\n", str);
+//	scanf("%s", str);
+//	printf("버퍼 남아있는 두번째 단어 : %s\n", str);
+//}
+
+//int main()
+//{
+//	int i = 0;
+//	char str[20];
+//	char ch;
+//
+//	do
+//	{
+//		ch = getchar();
+//		str[i] = ch;
+//		i++;
+//	} while (ch != '\n');
+//
+//	str[--i] = '\0';
+//	printf("%s", str);
+//}
+
+//=========== malloc 동적할당으로 n명의 학생 점수 입력후 총점, 평균 구해보기
+//void main()
+//{
+//	int* arScore;
+//	int i, stNum;
+//	int sum;
+//
+//	printf("학생수 입력 : ");
+//	scanf("%d", &stNum);
+//	arScore = (int*)malloc(stNum * sizeof(int));
+//	if (arScore == NULL)
+//	{
+//		printf("메모리가 부족합니다.\n");
+//		exit(0);
+//	}
+//
+//	for (i = 0; i < stNum; i++)
+//	{
+//		printf("%d번 학생 성적 입력 : ", i + 1);
+//		scanf("%d", &arScore[i]);
+//	}
+//
+//	sum = 0;
+//	for (i = 0; i < stNum; i++)
+//	{
+//		sum += arScore[i];
+//	}
+//
+//	printf("\n 총점은 %d점이고 평균은 %d점입니다.", sum, sum / stNum);
+//	free(arScore);
+//}
+
+////malloc 할당 후 realloc으로 재할당해보기
+//void main()
+//{
+//	int* ar;
+//
+//	ar=(int*)malloc(5 * sizeof(int)); // 메모리 동적 할당 int형포인터 ar에 int형 4바이트 5개 공간 할애해달라 ==> 총 20바이트 할당
+//	ar[4] = 1234; //5개의 공간중 5번째에 1234 대입
+//
+//	ar = (int*)realloc(ar, 10 * sizeof(int)); //20바이트할당받은 ar(5개공간) 을 10개 공간으로 늘리고싶다 ==> 40 바이트로 늘려라 (재할당)
+//	ar[9] = 5678; //10개의 공간중 10번째 5678 대입
+//
+//	printf("ar[4]=%d, %p ar[9]=%d, %p\n", ar[4], ar, ar[9], ar); // 만약 처음 할당받은 ar 20바이트 뒤에 이미 메모리가 차지하고있으면 ar데이터들을 들고 ar이 이사를 가게된다. = 다른 주소로 이동 
+//	free(ar);
+//}
+
+
+//void InputName(char **pName)
+//{
+//	*pName = (char*)malloc(12);//12바이트할당
+//	strcpy(*pName, "Cabin");
+//}
+//
+//void main()
+//{
+//	char *Name;
+//
+//	InputName(&Name);
+//	printf("이름은 %s입니다.", Name);
+//	free(Name);
+//}
+
+//void main()
+//{
+//	int i, icopy;
+//	int *pi;
+//
+//	i = 5;
+//	icopy = i;
+//	icopy = icopy + 1;
+//	printf("i=%d, icopy=%d\n", i, icopy);
+//
+//	i = 5;
+//	pi = &i;
+//	*pi = *pi + 1;
+//	printf("i=%d, *pi=%d\n", i, *pi);
+//}
+
+//void main(void)
+//{
+//	void arDump(void *array, int length);
+//
+//	unsigned char ari[2][3] = { {1,2,3},{4,5,6} };
+//
+//	arDump(ari, sizeof(ari));
+//	arDump(ari[0], sizeof(ari[0]));
+//	arDump(ari[1], sizeof(ari[1]));
+//}
+//
+//void arDump(void* array, int length)
+//{
+//	int i;
+//	for (i = 0; i < length; i++)
+//	{
+//		printf("%02X", *((unsigned char *)array + i));
+//	}
+//	printf("\n");
+//}
+
+//void main(void)
+//{
+//	int ar[5] = { 1,2,3,4,5 };
+//
+//	printf("ar[2]=%d\n", ar[2]);//3
+//	printf("ar[2]=%d\n", *(ar+2));//3
+//	printf("ar[2]=%d\n", 2[ar]);//
+//}
+
+
+
+
+
+
