@@ -2,6 +2,8 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<string.h>
+
 
 /*int main(void) {
 	printf("%d\n", 10);
@@ -474,9 +476,6 @@ int sum(int a)
 //	printf("ar[2]=%d\n", *(ar+2));//3
 //	printf("ar[2]=%d\n", 2[ar]);//
 //}
-
-
-
 
 
 

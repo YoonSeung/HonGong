@@ -313,8 +313,72 @@ int main()
 	}
 }*/
 
+//void main()
+//{
+//	int *arScore;
+//	int i, stNum;
+//	int sum;
+//
+//	printf("학생수 입력 : ");
+//	scanf("%d", &stNum);
+//	arScore = (int *)malloc(stNum * sizeof(int)); //int형 크기 * 할당받을 칸 수 
+//	if (arScore == NULL)
+//	{
+//		printf("메모리가 부족합니다.\n");
+//		exit(0);
+//	}
+//
+//	for (i = 0; i < stNum; i++)
+//	{
+//		printf("%d번 학생의 성적 입력 : ", i+1);
+//		scanf("%d", &arScore[i]);
+//	}
+//
+//	sum = 0;
+//	for (i = 0; i < stNum; i++)
+//	{
+//		sum += arScore[i];
+//	}
+//
+//	printf("총점 : %d , 평균 : %d\n", sum, sum / stNum);
+//	free(arScore);
+//}
 
-
+//
+//void bubbleSort(int *arr)
+//{
+//	int temp;
+//	for (int i = 0; i < 10; i++)
+//	{
+//		for (int j = 0; j < i; j++)
+//		{
+//			if (arr[j] > arr[j + 1])
+//			{
+//				temp = arr[j];
+//				arr[j] = arr[j + 1];
+//				arr[j + 1] = temp;
+//			}
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[10];
+//	for (int i = 0; i < 10; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//
+//	bubbleSort(&arr);
+//
+//	for (int i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
 
 
 
