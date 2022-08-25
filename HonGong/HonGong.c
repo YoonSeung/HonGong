@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
-#include<stdlib.h>
+#include<stdlib.h> //동적할당을 위해 쓸때 사용하는 헤더
 #include<string.h>
 
 
@@ -478,4 +478,190 @@ int sum(int a)
 //}
 
 
+//
+//int sum(int, int);
+//
+//int main(void)
+//{
+//	int(*fp)(int, int);
+//	int res;
+//
+//	fp = sum;
+//	res = fp(10, 20);
+//	printf("result : %d\n", res);
+//}
+//
+//int sum(int a, int b)
+//{
+//	return(a + b);
+//}
 
+//
+//void func(int(*fp)(int, int));
+//int sum(int a, int b);
+//int mul(int a, int b);
+//int max2(int a, int b);
+//
+//int main(void)
+//{
+//	int sel;
+//
+//	printf("01 두 정수의 합\n");
+//	printf("02 두 정수의 곱\n");
+//	printf("03 두 정수 중에서 큰 값 계산\n");
+//	printf("원하는 연산을 선택하세요 : ");
+//	scanf("%d", &sel);
+//
+//	switch (sel)
+//	{
+//	case 1: func(sum); break;
+//	case 2: func(mul); break;
+//	case 3: func(max2); break;
+//	}
+//}
+//void func(int(*fp)(int, int))
+//{
+//	int a, b;
+//	int res;
+//
+//	printf("두 정수의 값을 입력하세요 : ");
+//	scanf("%d%d", &a, &b);
+//	res = fp(a, b);
+//	printf("결과값은 : %d\n", res);
+//}
+//
+//int sum(int a, int b)
+//{
+//	return(a + b);
+//}
+//
+//int mul(int a, int b)
+//{
+//	return(a*b);
+//}
+//
+//int max2(int a, int b)
+//{
+//	if (a > b)return a;
+//	else return b;
+//}
+
+//int main(void)
+//{
+//	int a[5] = { 3,2,1,6,5 };
+//	int i, j, temp;
+//
+//	for (i = 0; i < 4; i++)
+//	{
+//		for (j = i + 1; j < 5; j++)
+//		{
+//			if (a[i] > a[j])
+//			{
+//				temp = a[i];
+//				a[i] = a[j];
+//				a[j] = temp;
+//			}
+//		}
+//	}
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%5d", a[i]);
+//	}
+//}
+
+//int main(void)
+//{
+//	int a[5] = { 3,2,1,6,5 };
+//	int i, j, temp;
+//	int min;
+//
+//	for (i = 0; i < 4; i++)
+//	{
+//		min = i;
+//		for (j = i+1; j < 5; j++)
+//		{
+//			if (a[min] > a[j])
+//			{
+//				min = j;
+//			}
+//		}
+//		if (min != i)
+//		{
+//			temp = a[i];
+//			a[i] = a[min];
+//			a[min] = temp;
+//		}
+//	}
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%5d", a[i]);
+//	}
+//}
+
+
+//=========================================================================================
+int main(void)
+{
+	//동적 할당 영역을 연결할 포인터 선언
+	int *pi;
+	double *pd;
+
+	//메모리 동적 할 당 후 포인터 연결
+	pi = (int *)malloc(sizeof(int)); 
+
+	//동적 할당에 실패하면 NULL 포인터 반환
+	if (pi == NULL)
+	{
+		//예외 상황 메시지 출력
+		printf("#메모리가 부족\n");
+		
+		//프로그램 종료
+		exit(1);
+	}
+	pd = (double *)malloc(sizeof(double));
+
+	//포인터로 동적 할당 영역 사용
+	*pi = 10;
+	*pd = 3.4;
+
+	printf("정수형 사용 : %d\n", *pi);
+	printf("실수형 사용 : %.1lf\n", *pd);
+
+	//할당해제
+	free(pi);
+	free(pd);
+
+}
+
+////혼	자	해	보	기
+//int main(void)
+//{
+//	//동적 할당 영역을 연결할 포인터 선언
+//	
+//
+//	//메모리 동적 할 당 후 포인터 연결
+//	
+//
+//	//동적 할당에 실패하면 NULL 포인터 반환
+//	
+//	{
+//		//예외 상황 메시지 출력
+//		printf("#메모리가 부족\n");
+//
+//		//프로그램 종료
+//
+//	}
+//	
+//	//실수형 동적할당
+//	pd = (double *)malloc(sizeof(double));
+//
+//	//포인터로 동적 할당 영역 사용
+//
+//
+//	printf("정수형 사용 : %d\n", *pi);
+//	printf("실수형 사용 : %.1lf\n", *pd);
+//
+//	//할당해제
+//
+//
+//}

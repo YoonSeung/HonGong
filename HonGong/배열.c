@@ -161,27 +161,187 @@
 //	}
 //}
 
-int main(void)
-{
-	int score[2][3][4] = {
-		{{72, 80, 95, 60}, {68, 98, 83, 90}, {75, 72, 84, 90}},
-		{{66, 85, 90, 88}, {95, 92, 88, 95}, {43, 72, 56, 75}}
-	};
+//int main(void)
+//{
+//	int score[2][3][4] = {
+//		{{72, 80, 95, 60}, {68, 98, 83, 90}, {75, 72, 84, 90}},
+//		{{66, 85, 90, 88}, {95, 92, 88, 95}, {43, 72, 56, 75}}
+//	};
+//
+//	int i, j, k;
+//
+//	for (i = 0; i < 2; i++)
+//	{
+//		printf("%d반 점수...\n", i + 1);
+//		for (j = 0; j < 3; j++)
+//		{
+//			for (k = 0; k < 4; k++)
+//			{
+//				printf("%5d", score[i][j][k]);
+//			}
+//			printf("\n");
+//		}
+//
+//		printf("\n");
+//	}
+//}
 
-	int i, j, k;
+//int main(void)
+//{
+//	char mark[5][5] = { 0 };
+//	int i, j;
+//	for (i = 0; i < 5; i++) {
+//		for (j = 0; j < 5; j++)
+//		{
+//			if (i + j == 4 || i == j) mark[i][j] = 'x';
+//			else mark[i][j] = " ";
+//		}
+//	}
+//	for (i = 0; i < 5; i++) {
+//		for (j = 0; j < 5; j++)
+//		{
+//			printf("%c", mark[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
 
-	for (i = 0; i < 2; i++)
-	{
-		printf("%d반 점수...\n", i + 1);
-		for (j = 0; j < 3; j++)
-		{
-			for (k = 0; k < 4; k++)
-			{
-				printf("%5d", score[i][j][k]);
-			}
-			printf("\n");
-		}
+//int main(void)
+//{
+//	char *pary[5];
+//	int i;
+//
+//	pary[0] = "dog";
+//	pary[1] = "elephant";
+//	pary[2] = "horse";
+//	pary[3] = "tiger";
+//	pary[4] = "lion";
+//
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%s\n", pary[i]);
+//	}
+//}
 
-		printf("\n");
-	}
-}
+//
+//int main(void)
+//{
+//	int ary1[4] = { 1,2,3,4 };
+//	int ary2[4] = { 5,6,7,8 };
+//	int ary3[4] = { 21,22,23,24 };
+//	int *pary[3] = { ary1, ary2, ary3 };
+//
+//	int i,j;
+//
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%5d", pary[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+
+//void swap_ptr(char **ppa, char **ppb);
+//int main(void)
+//{
+//	char *pa = "Success";
+//	char *pb = "Failure";
+//	printf("pa -> %s, pb -> %s\n", pa, pb);
+//	swap_ptr(&pa, &pb);
+//	printf("pa -> %s, pb -> %s\n", pa, pb);
+//}
+//void swap_ptr(char **ppa, char **ppb)
+//{
+//	char *pt;
+//
+//	pt = *ppa;
+//	*ppa = *ppb;
+//	*ppb = pt;
+//}
+
+//void print_str(char **pps, int cnt);
+//int main(void)
+//{
+//	char *ptr_ary[] = { "eagle", "tiger", "lion", "squirrel" };
+//	int count;
+//
+//	count = sizeof(ptr_ary) / sizeof(ptr_ary[0]);
+//	print_str(ptr_ary, count);
+//}
+//
+//void print_str(char **pps, int cnt)
+//{
+//	int i;
+//	for (i = 0; i < cnt; i++)
+//	{
+//		printf("%s\n", pps[i]);
+//	}
+//}
+
+//int main(void)
+//{
+//	int ary[5];
+//
+//	printf("	  ary값 : %u\t", ary);
+//	printf(" ary의 주소 : %u\n", &ary);
+//	printf("	ary + 1	: %u\t", ary + 1);
+//	printf("	 &ary+1 : %u\n", &ary + 1);
+//}
+
+//int main(void)
+//{
+//	int ary[3][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12} };
+//	int(*pa)[4];
+//	int i, j;
+//	pa = ary;
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%5d", pa[i][j]);
+//		}
+//		printf("\n");
+//
+//	}
+//}
+
+//void print_ary(int(*)[4]);
+//int main(void)
+//{
+//	int ary[3][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12} };
+//	print_ary(ary);
+//}
+//
+//void print_ary(int(*pa)[4])
+//{
+//	int i, j;
+//
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%5d", pa[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+
+//
+//struct tag_Friend {
+//	char Name[10];
+//	int Age;
+//	double Height;
+//};
+//
+//void main()
+//{
+//	struct tag_Friend Friend;
+//
+//	strcpy(Friend.Name, "아무개");
+//	Friend.Age = 30;
+//	Friend.Height = 178.2;
+//
+//	printf("이름 = %s, 나이 = %d, 키 = %.1f\n", Friend.Name, Friend.Age, Friend.Height);
+//}

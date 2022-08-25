@@ -130,6 +130,7 @@
     <ClCompile Include="문자열.c" />
     <ClCompile Include="배열.c" />
     <ClCompile Include="실전.c" />
+    <ClCompile Include="완벽정리.c" />
     <ClCompile Include="프로그래머스.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
