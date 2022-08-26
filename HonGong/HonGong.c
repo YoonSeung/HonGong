@@ -599,39 +599,39 @@ int sum(int a)
 //}
 
 
-//=========================================================================================
-int main(void)
-{
-	//동적 할당 영역을 연결할 포인터 선언
-	int *pi;
-	double *pd;
-
-	//메모리 동적 할 당 후 포인터 연결
-	pi = (int *)malloc(sizeof(int)); 
-
-	//동적 할당에 실패하면 NULL 포인터 반환
-	if (pi == NULL)
-	{
-		//예외 상황 메시지 출력
-		printf("#메모리가 부족\n");
-		
-		//프로그램 종료
-		exit(1);
-	}
-	pd = (double *)malloc(sizeof(double));
-
-	//포인터로 동적 할당 영역 사용
-	*pi = 10;
-	*pd = 3.4;
-
-	printf("정수형 사용 : %d\n", *pi);
-	printf("실수형 사용 : %.1lf\n", *pd);
-
-	//할당해제
-	free(pi);
-	free(pd);
-
-}
+////=========================================================================================
+//int main(void)
+//{
+//	//동적 할당 영역을 연결할 포인터 선언
+//	int *pi;
+//	double *pd;
+//
+//	//메모리 동적 할 당 후 포인터 연결
+//	pi = (int *)malloc(sizeof(int)); 
+//
+//	//동적 할당에 실패하면 NULL 포인터 반환
+//	if (pi == NULL)
+//	{
+//		//예외 상황 메시지 출력
+//		printf("#메모리가 부족\n");
+//		
+//		//프로그램 종료
+//		exit(1);
+//	}
+//	pd = (double *)malloc(sizeof(double));
+//
+//	//포인터로 동적 할당 영역 사용
+//	*pi = 10;
+//	*pd = 3.4;
+//
+//	printf("정수형 사용 : %d\n", *pi);
+//	printf("실수형 사용 : %.1lf\n", *pd);
+//
+//	//할당해제
+//	free(pi);
+//	free(pd);
+//
+//}
 
 ////혼	자	해	보	기
 //int main(void)
@@ -665,3 +665,283 @@ int main(void)
 //
 //
 //}
+
+
+
+
+////왜 안되는지 확인해볼것
+//char* solution(int n) {
+//	// 리턴할 값은 메모리를 동적 할당해주세요.
+//	char* answer = (char*)malloc(sizeof(char)*(n+1));
+//	char str[10000] = { '\0' }; //cpy함수로 붙일 공간
+//	char a[] = "수";
+//	char b[] = "박";
+//
+//	answer = str;
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		if (i % 2 == 0) {
+//			strcat(str[i], "수");
+//		}
+//		else
+//		{
+//			strcat(str[i],"박");
+//		}	
+//	}
+//	answer = str;
+//	printf("%s", answer);
+//	return answer;
+//}
+//
+//int main(void)
+//{
+//	int n=3;
+//
+//	solution(3);
+//	free(solution);
+//
+//}
+
+//int main(void)
+//{
+//	int a;
+//	scanf("%d", &a);
+//
+//	switch (a) {
+//	case 100:
+//		printf("%s\n", "A");
+//	case a
+//	}
+//}
+
+//int main(void)
+//{
+//	//할당한 저장 공간을 연결할 포인터
+//	int *pi;
+//	//한 번에 할당할 저장 공간의 크기, int형 변수 5개씩
+//	int size = 5;
+//	//현재 입력된 양수 갯수
+//	int count = 0;
+//	//양수를 입력할 변수
+//	int num;
+//	//반복 제어 변수
+//	int i;
+//
+//	pi = (int *)calloc(size, sizeof(int));
+//	while (1)
+//	{
+//		printf("양수만 입력하세요 =>");
+//		scanf("%d", &num);
+//		if (num <= 0)break;
+//		if (count == size)
+//		{
+//			size += 5;
+//			pi = (int*)realloc(pi, size * sizeof(int));
+//		}
+//		pi[count++] = num;
+//	}
+//	for (i = 0; i < count; i++)
+//	{
+//		printf("%5d", pi[i]);
+//	}
+//	free(pi);
+//}
+
+//void main(void)
+//{
+//	char arps[5][9] = { "고양이","개","오랑우탄","돼지","지렁이" };
+//	char(*ps)[9];
+//
+//	ps = arps;
+//	int i;
+//
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%s\n", *ps++);
+//	}
+//}
+
+//int GetTotalForWeek(int(*pa)[7])
+//{
+//	int i, sum = 0;
+//
+//	for (i = 0; i < 7; i++)
+//	{
+//		sum += pa[0][i];
+//	}
+//	return sum;
+//}
+//
+//void main(void)
+//{
+//	int ari[][7] = {
+//		{1,2,3,4,5,6,7},
+//		{8,9,10,11,12,13,14},
+//		{15,16,17,18,19,20,21}
+//	};
+//
+//	int i;
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("%d주의 판매량 = %d\n", i + 1, GetTotalForWeek(&ari[i]));
+//	}
+//}
+
+//int main(void)
+//{
+//	//임시 char 배열
+//	char temp[80];
+//	//동적 할당 영역을 연결할 포인터 배열
+//	char *str[3];
+//	//반복 제어 변수
+//	int i;
+//
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("문자열을 입력하세요 : ");
+//
+//		//!! 문자열 입력
+//		gets(temp);
+//		//문자열 저장 공간 할당
+//		str[i] = (char *)malloc(strlen(temp)+1); // null 값까지 포함해야 하기 때문에 +1을 한것이다.
+//		strcpy(str[i], temp);
+//	}
+//
+//	//입력된 문자열 출력
+//	for (i = 0; i < 3; i++)
+//	{
+//		printf("%s\n", str[i]);
+//	}
+//	
+//	//동적할당 영역 반환 
+//	for (i = 0; i < 3; i++)
+//	{
+//		free(str[i]);
+//	}
+//}
+//
+////=====================혼 자 해 보 기 
+////int main(void)
+////{
+////	//임시 char 배열
+////
+////	//동적 할당 영역을 연결할 포인터 배열
+////
+////	//반복 제어 변수
+////
+////
+////	for (i = 0; i < 3; i++)
+////	{
+////		printf("문자열을 입력하세요 : ");
+////
+////		//!! 문자열 입력
+////
+////		//문자열 저장 공간 할당
+////
+////
+////	}
+////
+////	//입력된 문자열 출력
+////
+////
+////	//동적할당 영역 반환 
+////
+////}
+
+//================================================================================================================================================
+
+////동적 할당 영역의 문자열을 출력하는 함수 선언 
+//void print_str(char **ps);
+//
+//int main(void)
+//{
+//	//임시 char 배열
+//	char temp[80];
+//	//문자열을 연결할 포인터 배열, 널 포인터로 초기화
+//	char *str[21] = { 0 };
+//	//반복 제어 변수
+//	int i = 0;
+//
+//	//최대 갯수 까지 반복
+//	while (i < 20)
+//	{
+//		printf("문자열을 입력하세요 : ");
+//		gets(temp);
+//		//end 가 입력되면 반복 종료
+//		if (strcmp(temp, "end") == 0) break; //cmp는 문자열에서 해당 단어가 같을경우 0을 리턴 // 정리했던내용 두 문자열이 같은지 비교할때 자주 이용
+//		//문자열 저장 공간 할당
+//		str[i] = (char*)malloc(strlen(temp) + 1);
+//		//동적 할당 영역에 문자열 복사
+//		strcpy(str[i], temp);
+//		i++;
+//	}
+//	//입력한 문자열 출력
+//	print_str(str);
+//	//str에 연결된 문자열이 없을 때까지 동적 할당 영역 반환환
+//	for (i = 0; str[i] != NULL; i++)
+//	{
+//		free(str[i]);
+//	}
+//}
+//
+////동적할당영역의 문자열을 출력하는 함수 기능 구현 
+//void print_str(char **ps)
+//{
+//	//포인터 배열 값이 널 포인터가 아닌 동안 반복해라
+//	while (*ps != NULL)
+//	{
+//		//ps가 가리키는 것은 포인터 배열의 요소
+//		printf("%s\n", *ps);
+//		//ps가 다음 배열 요소를 가리킨다.
+//		ps++;
+//	}
+//}
+
+//===========혼		자		해		보		기
+
+//동적 할당 영역의 문자열을 출력하는 함수 선언 
+void print_str(char **ps);
+
+int main(void)
+{
+	//임시 char 배열 temp 선언
+	char temp[80];
+	//문자열을 연결할 포인터 배열str, 널 포인터로 초기화
+	char* str[21] = { 0 };	
+	//반복 제어 변수
+	int i = 0;
+
+	//최대 갯수 까지 반복
+	while(i<20 )
+	{
+		printf("문자열을 입력하세요 : ");
+		gets(temp);
+		//end 가 입력되면 반복 종료
+		if (strcmp(temp, "end") == 0)break;
+		//문자열 저장 공간 할당
+		str[i] = (char*)malloc(strlen(temp) + 1);
+		//동적 할당 영역에 문자열 복사
+		strcpy(str[i], temp);
+	}
+	//입력한 문자열 출력
+	print_str(str);
+	//str에 연결된 문자열이 없을 때까지 동적 할당 영역 반환
+	for (i=0; str[i] != NULL ; i++)
+	{
+		free(str[i]);
+	}
+}
+
+//동적할당영역의 문자열을 출력하는 함수 기능 구현 
+void print_str(char **ps)
+{
+	//포인터 배열 값이 널 포인터가 아닌 동안 반복해라
+	while ( *ps != NULL)
+	{
+		//ps가 가리키는 것은 포인터 배열의 요소
+		printf("%s\n", *ps);
+		//ps가 다음 배열 요소를 가리킨다.
+		*ps++;
+	}
+}

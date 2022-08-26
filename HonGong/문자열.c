@@ -607,3 +607,22 @@
 //	printf("above가 %s습니다.\n", my_strstr("misunderstand", "above") == NULL ? "없" : "있");
 //
 //}
+
+//void main(void)
+//{
+//	char str[] = "Korea/Japan WorldCup";
+//	char *ptr;
+//	int count = 0;
+//	
+//	for (ptr = str;;)
+//	{
+//		ptr = strstr(ptr, "World");
+//		if (ptr == NULL)
+//		{
+//			break;
+//		}
+//		count++;
+//		ptr++;
+//	}
+//	printf("%d", count);
+//}
