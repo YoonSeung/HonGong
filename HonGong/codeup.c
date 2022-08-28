@@ -65,21 +65,43 @@
 //		exit(0);
 //}
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char str[101];
+//
+//	gets(str); // 띄어쓰기까지 전부 저장
+//
+//	for (int i = 0; i < strlen(str); i++)
+//	{
+//		if (str[i] != ' ') // 저장된 문자열 배열 중 띄어쓰기가 아니라면 printf를 실행해서 출력하는 함수
+//			printf("%c", str[i]);
+//	}
+//}
 
-int main()
-{
-	char str[101];
-
-	gets(str); // 띄어쓰기까지 전부 저장
-
-	for (int i = 0; i < strlen(str); i++)
-	{
-		if (str[i] != ' ') // 저장된 문자열 배열 중 띄어쓰기가 아니라면 printf를 실행해서 출력하는 함수
-			printf("%c", str[i]);
-	}
-
-	
-}
+//#include<stdio.h>
+//#include<stdlib.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char str[21];
+//	char res[21];
+//
+//	scanf("%s", str);
+//
+//	for (int i = 0; i < strlen(str); i++)
+//	{
+//		printf("%c", str[i] + 2);
+//		
+//	}
+//	printf("\n");
+//	for (int i = 0; i < strlen(str); i++)
+//	{
+//		printf("%c", (str[i] * 7) % 80 + 48);
+//	}
+//	
+//}
