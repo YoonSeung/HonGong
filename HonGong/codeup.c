@@ -105,3 +105,83 @@
 //	}
 //	
 //}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b, c, temp;
+//
+//	scanf("%d %d %d", &a, &b, &c);
+//
+//	if (a % 2 != 0 && b % 2 != 0 && c % 2 != 0)
+//		printf("짝수를 최소 한개는 입력해주세요");
+//
+//	//쓴이유 : 문제에서 짝수만 '순서대로' 라고 조건이 있어서 오름차순으로 쓰라는걸로 착각했음
+//	//if (a > b)
+//	//{
+//	//	temp = b;
+//	//	b = a;
+//	//	a = temp;
+//	//}
+//
+//	//if(b>c)
+//	//{
+//	//	temp = c;
+//	//	c = b;
+//	//	b = temp;
+//	//}
+//
+//	if (a % 2 == 0) printf("%d\n", a);
+//	if (b % 2 == 0) printf("%d\n", b);
+//	if (c % 2 == 0) printf("%d\n", c);
+//
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int n;
+//
+//	scanf("%d", &n);
+//
+//	if (n > 12 || n < 0)
+//		printf("1월 부터 12월 사이 숫자를 입력해주세요.");
+//
+//	else {
+//		switch (n)
+//		{
+//		case 12:
+//		case 1:
+//		case 2:
+//			printf("winter");
+//			break;
+//		case 3:
+//		case 4:
+//		case 5:
+//			printf("spring");
+//			break;
+//		case 6:
+//		case 7:
+//		case 8:
+//			printf("summer");
+//			break;
+//		default:
+//			printf("fall");
+//		}
+//	}
+//
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	char c;
+//
+//	do {
+//
+//		scanf("%c ", &c);
+//		printf("%c\n", c);
+//
+//	} while (c != 'q');
+//
+//}

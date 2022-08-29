@@ -4,52 +4,11 @@
 #include <stdlib.h>
 #include<string.h>
 
-////num이 짝수면 Even, 홀수면 Odd를 출력하기(메모리 동적할당을 이용해서) (내가 직접 다시 해보기)
-//	char* solution(int num) {
-//		// 리턴할 값은 메모리를 동적 할당해주세요
-//		
-//		char* answer = (char*)malloc(5);
-//		if (num % 2 == 0)
-//			strcpy(answer, "Even");
-//		else
-//			strcpy(answer, "Odd");
-//
-//		return answer;
-//
-//	}
-//
-//	int main() {
-//		char * result = NULL;
-//
-//		result = solution(1);
-//		printf("%s\n", result);
-//		free(result);
-//
-//		result = solution(100);
-//		printf("%s\n", result);
-//		free(result);
-//	}
 
 ////두 수를 입력했을때 직사각형 찍기 a는 열, b 는 행 (통과)
 //1. 한 줄에 몇 개의 *이 찍히는지 확인 ( a 개 찍힘)
 //2. 1번의 과정이 몇번 일어나는지 확인 ( b 번 )
-//int main(void) {
-//	int a;
-//	int b;
-//
-//
-//	scanf_s("%d %d", &a, &b);
-//
-//	for (int i = 0; i < b; i++)
-//	{
-//		for (int j = 0; j <a; j++)
-//		{
-//			printf("*");
-//		}
-//		printf("\n");
-//	}
-//	return 0;
-//}
+
 
 
 ////배열 안의 요소의 평균값 구하기 
@@ -122,4 +81,34 @@
 //	
 //	printf("%s\n", result ? "true" : "false" );
 //	printf("%s\n", result1 ? "true" : "false");
+//}
+
+
+/*===================== 문자열을 정수로 바꾸기 ===================*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+
+// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int solution(const char* s) {
+//	char* str = (char*)malloc(5);
+//	int answer = 0;
+//	int len = strlen(str);
+//	
+//	str = strcpy(str, s);
+//	
+//	if(str[0])
+//
+//	return answer;
+//}
+//
+//
+//int main()
+//{
+//	char* str = "-1234";
+//	int n = 0;
+//
+//	n = atoi(str);
+//
+//	printf("%d", n);
 //}

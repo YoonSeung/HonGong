@@ -402,5 +402,15 @@ int main()
 //	free(pi);
 //}
 //
-
+//
+//int main()
+//{
+//	char* p = "Hello";
+//
+//	for (int i = 0; i < strlen(p); i++)
+//	{
+//		printf("%c %c\n", p[i], p[i+1]);
+//		printf("%d %d\n", p[i], p[i + 1]);
+//	}
+//}
 
