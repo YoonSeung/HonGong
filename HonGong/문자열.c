@@ -613,6 +613,7 @@
 //	char str[] = "Korea/Japan WorldCup";
 //	char *ptr;
 //	int count = 0;
+
 //	
 //	for (ptr = str;;)
 //	{

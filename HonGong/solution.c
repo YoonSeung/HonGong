@@ -263,29 +263,157 @@
 //	printf("%d\n", res);
 //}
 
-/*=========== 핸드폰 번호 가리기 ====================(22 08 29 풀고있는중)*/
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include<string.h>
+///*=========== 핸드폰 번호 가리기 ====================*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include<string.h>
+//
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//char* solution(const char* phone_number) {
+//	// return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
+//	char* answer = (char*)malloc(20);
+//
+//	char arr[21] = { 0, };
+//	//strcpy(answer, phone_number);
+//	int len = strlen(phone_number);
+//
+//	//_strnset(answer, '*',len-4);
+//
+//	for (int i = 0; i < len ; i++)
+//	{
+//		if (i < len - 4)
+//			arr[i] = '*';
+//		else
+//			arr[i] = phone_number[i];
+//	}
+//	strcpy(answer, arr);
+//	return answer;
+//}
+//int main()
+//{
+//	char* pn = "01033334444";
+//	char* res;
+//	res = solution(pn);
+//	printf("%s\n", res);
+//
+//	char* pn2 = "027778888";
+//	res = solution(pn2);
+//	printf("%s\n", res);
+//
+//	char* pn3 = "00000111112222233333";
+//	res = solution(pn3);
+//	printf("%s\n", res);
+//}
+///*
+//처음엔 strnset을 이용하여서 단순하게 바꾸는 문제인줄알고 풀었음 하지만 프로그래머스에서 에러가 났고 문제가 함수로 푸는게 아니라는 것을 깨닫고 다시 시도함
+//제한조건이 길이가 4이상 20이하인 문자열이기때문에 동적할당을 20을 주고 문자열의 마지막 4자리만 phone_number의 값이고 나머지는 *로 표현한다는 점에서 
+//전체 문자열길이에서 len-4 까지를 *을 대입하면 되겠다고 생각하고 값을 대입할 배열을 새로 선언하고 반복문을 통해 arr[0]부터 arr[len-5] 까지를 *을 넣고
+//arr[len-4] 부터 arr[len] 까지는 기존의 phone_number의 값을 그대로 대입시킨 후 answer 문자열포인터공간에 arr문자열을 strcpy를 통해 복사해 출력시킴
+//*/
 
-// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-char* solution(const char* phone_number) {
-	// return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
-	char* answer = (char*)malloc(20);
-	answer = strcpy(answer, phone_number);
-	int len = strlen(phone_number);
+/*=============자릿수 더하기====================*/
 
-	for (int i = 0; i < len - 4; i++)
-	{
-		answer = strset(answer[i], '*');
-	}
-	return answer;
-}
-int main()
-{
-	char* pn = "01033334444";
-	char* res;
-	res = solution(pn);
-	printf("%s\n", res);
-}
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+////#include<math.h>
+//
+//int solution(int n) {
+//	int answer = 0;
+//	int sum = 0;
+//	int na = 0;
+//	
+//	// 방법을 알기전까지 작성했던 코드임. 너무 복잡하게 생각했다. while문으로 자연수 n의 길이를 구하는 공식을 생각하다 쉽게 풀수있는 방법을 파악해 수정 
+//	//int len = 0; 
+//	//while (n > 0)
+//	//{
+//	//	len++;
+//	//	n /= 10;
+//	//}
+//	//int* c = (int*)calloc(len,sizeof(int));
+//	//for (int i = 0; i < len; i++)
+//	//{
+//	//	//c[i] = n / (int)pow((double)10, (double)(len - i - 1));
+//	//	//n =  n % (int)pow((double)10, (double)(len - i - 1));
+//	//	//sum += c[i];
+//	//}
+//	//------------------------------------------------
+//
+//	while (n > 0) // n이 0보다 클동안 반복
+//	{
+//		na = n % 10; //na(나머지값저장) 에 자연수 n 에서 10을 나눈 나머지값을 저장
+//		n /= 10; // 그 후 n은 10을나눈 몫값으로 대입
+//		sum += na; // 합을 구하는 변수 sum에 나머지값 na를 더해서 대입
+//	}
+//	answer = sum; //while문이 끝나는동안 더해진 sum값을 answer에 대입
+//
+//
+//	return answer;
+//}
+//
+//int main()
+//{
+//	int n;
+//	int res;
+//
+//	n = 123;
+//	res = solution(n);
+//	printf("%d\n", res);
+//
+//	n = 987;
+//	res = solution(n);
+//	printf("%d\n", res);
+//
+//	n = 111111111;
+//	res = solution(n);
+//	printf("%d\n", res);
+//}
+///*
+//문제를 너무 어렵게 생각하면 안됨. 
+//각 자릿수의 합을 구하는 공식이기 때문에 처음에 나는 int*형 c를 선언해 자연수의 길이만큼 할당해주고 for문을 돌려 c의 앞부터 
+//차례대로 n / 10^(len-i-1) 즉, 맨 앞자리의 10진수 자릿수씩 나눠서 나온 몫을 대입하고 그뒤 n은 나머지를 대입한 후 sum에 c[i]번지에 있는 값을 더해서 출력하려했다.
+//하지만 위의 주석과 같이 자연수 n의 길이를 구하려고 썼던 while문에서 n /= 10 을 반복해 구하는 식에서 나머지값을 추가해 그것을 더하면 되지 않나 라는 생각이 들었고 
+//그 생각을 반영해 수정해서 처리함
+//*/
+
+///*=========숫자 문자열과 영단어 ============*/
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int solution(const char* s) {
+//	int answer = 0;
+//	char* arr[][6] = {"zero","one","two","three","four","five","six","seven","eight","nine" };
+//	int len = strlen(s);
+//	
+//	for (int i = 0; i < len; i++)
+//	{
+//		if (s[i] > 47 && s[i] < 58) // s문자열의 요소가 숫자형태인 문자 0 ~ 9 라면 
+//		{
+//			
+//		}
+//		else							//숫자형태 문자열이 아니라면
+//		{
+//				
+//		}
+//
+//	}
+//
+//	return answer;
+//}
+//
+//int main()
+//{
+//	char* s = "one4seveneight";
+//	int res;
+//
+//	res = solution(s);
+//	printf("%d\n", res);
+//}
+
+
+
