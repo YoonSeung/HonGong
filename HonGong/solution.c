@@ -377,43 +377,122 @@
 //그 생각을 반영해 수정해서 처리함
 //*/
 
-///*=========숫자 문자열과 영단어 ============*/
+/*=========숫자 문자열과 영단어 ============ (220901) */
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+
+// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+int solution(const char* s) {
+	int answer = 0;
+	int len = strlen(s);
+	char* s2 = (char*)malloc(sizeof(char)* len);
+
+	char arr[10][6] = {"zero","one","two","three","four","five","six","seven","eight","nine" };
+
+	int temp = 0;
+	
+	
+	for (int i = 0; i < len ; i++)
+	{
+		char* ptr = strstr(s, arr[i]);
+
+		if (ptr != NULL)
+		{
+			s2[i] = i + 48;
+		}
+
+
+		if (s[i] > 47 && s[i] < 58)
+		{
+			strcpy(s2[i], s[i]);
+		}
+		else
+		{
+
+		}
+		
+	}
+
+	for (int i = 0; i < strlen(s2) ; i++)
+	{
+		temp = (temp * 10) + (int)(s2[i] - 48);
+	}		
+	answer = temp;
+	return answer;
+}
+
+int main()
+{
+	
+	int res;
+
+
+	//char* s = "one4seveneight";
+	//res = solution(s);
+	//printf("%d\n", res);
+
+	char* s2 = "one";
+	res = solution(s2);
+	printf("%d\n", res);
+}
+
+
+
+
+
+
+///*=========하샤드 수 ============*/
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
-//#include <string.h>
 //
-//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-//int solution(const char* s) {
-//	int answer = 0;
-//	char* arr[][6] = {"zero","one","two","three","four","five","six","seven","eight","nine" };
-//	int len = strlen(s);
-//	
-//	for (int i = 0; i < len; i++)
+//bool solution(int x) {
+//	bool answer = true;
+//	int sum = 0;
+//	int x_num = x;			//숫자 x를 복사받을 변수 x_num 선언
+//
+//	while (x_num > 0)		//x_num 이 0보다 클때까지 반복하겠다
 //	{
-//		if (s[i] > 47 && s[i] < 58) // s문자열의 요소가 숫자형태인 문자 0 ~ 9 라면 
-//		{
-//			
-//		}
-//		else							//숫자형태 문자열이 아니라면
-//		{
-//				
-//		}
-//
+//		int m = x_num % 10;	//숫자 x에 10을 나눠서 나오는 나머지가 1의 자리부터의 숫자이고 그것을 m에 저장
+//		x_num /= 10;		//x_num은 x_num이 0보다 클동안 10으로 나눈 몫으로 저장
+//		sum += m;			//sum변수에 나머지로 나온 숫자들을 계속 더함
 //	}
+//
+//	if (x % sum  == 0)		//하샤드 수 원칙 (숫자 x 가 x의 각자리에 있는 숫자들의 합으로 나누어 지면 하샤드 수 )가 맞으면 true 틀리면 false 
+//		answer = true;
+//	else
+//		answer = false;
 //
 //	return answer;
 //}
+
+
+/////*========= 음양 더하기 ============*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
 //
-//int main()
-//{
-//	char* s = "one4seveneight";
-//	int res;
+//// absolutes_len은 배열 absolutes의 길이입니다.
+//// signs_len은 배열 signs의 길이입니다.
+//int solution(int absolutes[], size_t absolutes_len, bool signs[], size_t signs_len) {
+//	int answer = 123456789;
+//	int sum = 0;
 //
-//	res = solution(s);
-//	printf("%d\n", res);
+//	for (int i = 0; i < absolutes_len; i++)
+//	{
+//		if (signs[i] == false)
+//		{
+//			absolutes[i] = -absolutes[i];
+//		}
+//		sum += absolutes[i];
+//	}
+//
+//
+//	answer = sum;
+//	return answer;
 //}
-
-
 

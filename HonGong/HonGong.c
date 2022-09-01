@@ -3,6 +3,7 @@
 #include<string.h>
 #include<stdlib.h> //동적할당을 위해 쓸때 사용하는 헤더
 #include<string.h>
+#include <stdbool.h>
 
 
 /*int main(void) {
@@ -968,5 +969,89 @@ int sum(int a)
 //	printf("after : *value=%d, *refer=%d\n", *value, *refer);
 //
 //	return 0;
+//}
+
+//char *strcat2(char *dst, const char *src) {
+//	char *cp = dst;
+//	while (*cp) cp++;
+//	while (*cp++ = *src++);
+//
+//	return dst;
+//}
+//
+//int main()
+//{
+//	char str[80];
+//
+//	strcpy(str, "Hello");
+//	strcat2(str, " World");
+//
+//	printf("%s", str);
+//}
+
+
+
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int solution(const char* s) {
+//	int answer = 0;
+//	int temp = 0;
+//	int len = strlen(s);
+//	char* str = (char*)malloc(len);
+//
+//
+//	if (s[0] == '-')
+//	{
+//		for (int i = 1; i < len; i++)
+//		{
+//			temp = (temp * 10) + (int)(s[i] - 48);
+//		}
+//		answer = -temp;
+//	}
+//	else
+//	{
+//		for (int i = 0; i < len; i++)
+//		{
+//			temp = (temp * 10) + (int)(s[i] - 48);
+//		}
+//		answer = temp;
+//	}
+//	return answer;
+//}
+//
+//int main()
+//{
+//
+//	int res;
+//
+//
+//	char* s = "1234";
+//	res = solution(s);
+//	printf("%d\n", res);
+//
+//	char* s2 = "-1234";
+//	res = solution(s2);
+//	printf("%d\n", res);
+//
+//	char* s3 = "11111";
+//	res = solution(s3);
+//	printf("%d\n", res);
+//
+//	char* s5 = "1";
+//	res = solution(s5);
+//	printf("%d\n", res);
+//
+//	char* s6 = "100";
+//	res = solution(s6);
+//	printf("%d\n", res);
+//
+//	char* s7 = "0100";
+//	res = solution(s7);
+//	printf("%d\n", res);
+//
 //}
 
