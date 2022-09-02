@@ -376,68 +376,70 @@
 //하지만 위의 주석과 같이 자연수 n의 길이를 구하려고 썼던 while문에서 n /= 10 을 반복해 구하는 식에서 나머지값을 추가해 그것을 더하면 되지 않나 라는 생각이 들었고 
 //그 생각을 반영해 수정해서 처리함
 //*/
-
-/*=========숫자 문자열과 영단어 ============ (220901) */
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include <string.h>
-
-// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-int solution(const char* s) {
-	int answer = 0;
-	int len = strlen(s);
-	char* s2 = (char*)malloc(sizeof(char)* len);
-
-	char arr[10][6] = {"zero","one","two","three","four","five","six","seven","eight","nine" };
-
-	int temp = 0;
-	
-	
-	for (int i = 0; i < len ; i++)
-	{
-		char* ptr = strstr(s, arr[i]);
-
-		if (ptr != NULL)
-		{
-			s2[i] = i + 48;
-		}
-
-
-		if (s[i] > 47 && s[i] < 58)
-		{
-			strcpy(s2[i], s[i]);
-		}
-		else
-		{
-
-		}
-		
-	}
-
-	for (int i = 0; i < strlen(s2) ; i++)
-	{
-		temp = (temp * 10) + (int)(s2[i] - 48);
-	}		
-	answer = temp;
-	return answer;
-}
-
-int main()
-{
-	
-	int res;
-
-
-	//char* s = "one4seveneight";
-	//res = solution(s);
-	//printf("%d\n", res);
-
-	char* s2 = "one";
-	res = solution(s2);
-	printf("%d\n", res);
-}
+//
+///*=========숫자 문자열과 영단어 ============ (220901) */
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int solution(const char* s) {
+//	int answer = 0;
+//	int len = strlen(s);
+//	char* s2 = (char*)malloc(sizeof(char)* len);
+//
+//	char arr[10][6] = {"zero","one","two","three","four","five","six","seven","eight","nine" };
+//
+//	int temp = 0, pos = 0;
+//	int iter = 0;
+//
+//	char * ptr = NULL;
+//
+//	for (iter = 0; iter < 10; iter++)
+//		ptr = strstr(s, arr[i]);
+//
+//
+//	for (int i = 0; i < len; i++) {
+//		char* ptr = strstr(s, arr[i]);
+//
+//		if (ptr != NULL)		{
+//			s2[i] = i + 48;
+//			pos = strlen(ptr);
+//			s += pos;
+//
+//		}
+//
+//
+//		if (s[i] > 47 && s[i] < 58)		{
+//			strcpy(s2[i], s[i]);
+//		}
+//		
+//	}
+//
+//	for (int i = 0; i < strlen(s2) ; i++)
+//	{
+//		temp = (temp * 10) + (int)(s2[i] - 48);
+//	}		
+//	answer = temp;
+//	return answer;
+//}
+//
+//int main()
+//{
+//	
+//	int res;
+//
+//
+//	//char* s = "one4seveneight";
+//	//res = solution(s);
+//	//printf("%d\n", res);
+//
+//	char* s2 = "one";
+//	res = solution(s2);
+//	printf("%d\n", res);
+//}
 
 
 
@@ -496,3 +498,21 @@ int main()
 //	return answer;
 //}
 
+/* ===================== 이상한 문자 만들기===================== */
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//char* solution(const char* s) {
+//	// return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
+//	char* answer = (char*)malloc(strlen(s));
+//
+//	for (int i = 0; i < strlen(s); i++)
+//	{
+//		if(s[i])
+//	}
+//
+//	return answer;
+//}

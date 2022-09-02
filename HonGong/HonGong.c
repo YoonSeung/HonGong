@@ -1055,3 +1055,148 @@ int sum(int a)
 //
 //}
 
+
+//struct mydata
+//{
+//	int age;
+//	int weight;
+//
+//	char name[16];
+//	char juso[80];
+//};
+//
+//
+//int main()
+//{
+//	struct mydata data;
+//	struct mydata *mdata;
+//	char f_data[120];
+//	int my_weight;
+//	int weight;
+//
+//	data.age = 29;
+//	data.weight = 64;
+//
+//	strcpy(data.name, "yundream");
+//	strcpy(data.juso, "seoul korea");
+//
+//	memset(f_data, 0x00, 120);
+//
+//	memcpy(f_data, (void*)&data, sizeof(struct mydata));
+//	mdata = (void*)&f_data;
+//	printf("pcopy %d\n", mdata->age);
+//	memcpy((void*)&my_weight, f_data + 6, sizeof(int));
+//	printf("%d\n", my_weight);
+//	weight = *(int *)(f_data + 6);
+//	printf("%d\n", weight);
+//
+//}
+//
+//void main()
+//{
+//	int ar[5] = { 1,2,3,4,5 };
+//	char ar2[5]={ '1','2','3','4','5' };
+//	char* s = "Hello";
+//
+//	int *pi1 = &ar[0];
+//	char *cpi1 = &ar2[0];
+//	
+//	pi1++;
+//	cpi1++;
+//	*pi1 = 0;
+//	*cpi1 = 'a';
+//
+//
+//	const int *pi2 = &ar[0];
+//	pi2++;
+//	/**pi2 = 0;*/
+//
+//	int *const pi3 = &ar[0];
+//	/*pi3++;*/
+//	*pi3 = 0;
+//
+//	const int * const pi4 = &ar[0];
+//	/*pi4++;
+//	*pi4 = 0;*/
+//
+//	printf("%d, %p\n", pi1, pi1);
+//}
+
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//
+//long long solution(int price, int money, int count) {
+//	long long answer = -1;
+//	long long sum = 0;
+//	int i = 0;
+//
+//
+//	for (i = 0; i < count; i++)
+//	{
+//		sum += price * (i + 1);
+//	}
+//	answer = sum - money;
+//
+//	if (answer <= 0)
+//		answer *= 0;
+//
+//	return answer;
+//}
+//
+//int main() {
+//	int price = 0, money = 0, count = 0;
+//	int res = 0;
+//
+//
+//	price = 1;
+//	money = 0;
+//	count = 1;
+//	res = solution(price, money, count);
+//	printf("%d\n", res);
+//
+//	price = 3;
+//	money = 20;
+//	count = 4;
+//	res = solution(price, money, count);
+//	printf("%d\n", res);
+//
+//	price = 1;
+//	money = 1;
+//	count = 1;
+//	res = solution(price, money, count);
+//	printf("%d\n", res);
+//
+//	price = 2500;
+//	money = 1000000000;
+//	count = 2500;
+//	res = solution(price, money, count);
+//	printf("%d\n", res);
+//}
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int num) {
+	int answer = 0;
+	int count;
+	int cpynum = 0;
+
+	while (cpynum == 1) {
+
+		if (cpynum % 2 == 0) {
+			cpynum /= 2;
+		}
+		else {
+			cpynum = cpynum * 3 + 1;
+		}
+		count++;
+
+	}
+
+	if (count > 500)
+		answer = -1;
+
+	return answer ;
+}
