@@ -1180,23 +1180,41 @@ int sum(int a)
 
 int solution(int num) {
 	int answer = 0;
-	int count;
-	int cpynum = 0;
+	long numcpy = num; // num이 626331같은 큰 수가 들어가있을때 홀수일경우에 곱해지는 num값이 int 범위를 벗어나는 경우 발생한다.
+	int count = 0;
 
-	while (cpynum == 1) {
+	while (numcpy != 1) {
 
-		if (cpynum % 2 == 0) {
-			cpynum /= 2;
+		if (count == 500) {
+			return -1;
+		}
+		else if (numcpy % 2 == 0) {
+			numcpy /= 2;
+			count++;
 		}
 		else {
-			cpynum = cpynum * 3 + 1;
+			numcpy = numcpy * 3 + 1;
+			count++;
 		}
-		count++;
-
 	}
-
-	if (count > 500)
-		answer = -1;
+	answer = count;
 
 	return answer ;
+}
+int main()
+{
+	int num;
+	long res = 0;
+
+	num = 626331;
+	res = solution(num);
+	printf("%ld\n", res);
+
+	num = 6;
+	res = solution(num);
+	printf("%ld\n", res);
+
+	num = 16;
+	res = solution(num);
+	printf("%ld\n", res);
 }
