@@ -516,3 +516,49 @@
 //
 //	return answer;
 //}
+
+ 
+/* ===================== 콜라츠 추측 ===================== */
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+
+int solution(int num) {
+	int answer = 0;
+	long long numcpy = num; // num이 626331같은 큰 수가 들어가있을때 홀수일경우에 곱해지는 num값이 int 범위를 벗어나는 경우 오버플로우가 발생한다. 실제로 626331 같은경우 돌리면 104번째부터 음수로 변환된다. 
+	int count = 0;
+
+	while (numcpy != 1) { //numcpy가 1이 아닐동안 계속 반복
+
+		if (count > 500) { //3. 그렇게 반복하면서 센 횟수(count)가 500이 넘는다면 -1을 출력한다.
+			return answer = -1;
+		}
+		else if (numcpy % 2 == 0) { // 조건1. 짝수라면 2로 나눈다
+			numcpy /= 2;
+			count++;
+		}
+		else {
+			numcpy = numcpy * 3 + 1; // 조건2. 홀수라면 3을곱하고 1을 더한다.
+			count++;
+		}
+		answer = count; 
+	}
+	return answer;
+}
+
+int main() {
+	int num;
+	int res;
+
+	num = 626331;
+	res = solution(num);
+	printf("%d\n", res);
+
+	num = 6;
+	res = solution(num);
+	printf("%d\n", res);
+
+	num = 16;
+	res = solution(num);
+	printf("%d\n", res);
+}
