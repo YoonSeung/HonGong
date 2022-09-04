@@ -130,3 +130,14 @@
 //
 //	return 0;
 //}
+
+int main() {
+	char* str = "Hello Wolrd";
+
+	printf("%p -------- %s \n", str, str);
+
+	str = strchr(str, ' ');
+	str++;
+
+	printf("%p ------------%s\n", str, str);
+}
