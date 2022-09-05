@@ -132,14 +132,15 @@
 //}
 
 
-/*특정문자가 있을경우 포인터 이동 하는 법 파악*/
-int main() {
-	char* str = "Hello Wolrd";
+///*특정문자가 있을경우 포인터 이동 하는 법 파악*/
+//int main() {
+//	char* str = "Hello Wolrd";
+//
+//	printf("%p -------- %s \n", str, str);
+//
+//	str = strchr(str, ' ');
+//	str++;
+//
+//	printf("%p ------------%s\n", str, str);
+//}
 
-	printf("%p -------- %s \n", str, str);
-
-	str = strchr(str, ' ');
-	str++;
-
-	printf("%p ------------%s\n", str, str);
-}

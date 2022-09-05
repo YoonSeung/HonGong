@@ -129,6 +129,7 @@
     </ClCompile>
     <ClCompile Include="Pointer.c" />
     <ClCompile Include="solution.c" />
+    <ClCompile Include="string.c" />
     <ClCompile Include="문자열.c" />
     <ClCompile Include="배열.c" />
     <ClCompile Include="실전.c" />
