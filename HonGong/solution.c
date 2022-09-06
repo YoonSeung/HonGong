@@ -1,4 +1,4 @@
-/* ======================두정수 사이의 합=====================*/
+/* 1 ======================두정수 사이의 합=====================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -6,7 +6,7 @@
 //long long solution(int a, int b) {
 //	long long answer = 0;
 //	long long sum = 0;
-
+//
 //	if (a < b) { //시작지점을 정하기위해 if else문으로 두수비교
 //		for (int i = a; i <= b;i++)
 //			sum += i;
@@ -20,8 +20,7 @@
 //	return answer;
 //}
 
-
-/*===================문자열 다루기 기본============================*/
+/* 2 ===================문자열 다루기 기본============================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -44,7 +43,7 @@
 //}
 /*아스키코드값을 활용하는 것을 숙지시키고 문제를 제대로 이해해야한다. 나의 경우 첫번째 조건인 문자열이 4와 6일경우를 처리하지않아서 테스트케이스에서 오류가 났었다.*/
 
-/*==================평균 구하기===================*/
+/* 3 ==================평균 구하기===================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -64,7 +63,7 @@
 //	return answer;
 //}
 
-/*=========짝수와 홀수 =========== */
+/* 4 =========짝수와 홀수 =========== */
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -78,7 +77,7 @@
 //	return answer;
 //}
 
-/*==========직사각형 별찍기 ========== */
+/* 5 ==========직사각형 별찍기 ========== */
 //#include<stdio.h>
 //int main(void) {
 //	int a;
@@ -97,7 +96,7 @@
 //	return 0;
 //}
 
-/*========== 가운데 글자 가져오기  ========== */
+/* 6 ========== 가운데 글자 가져오기  ========== */
 //char* solution(const char* s) {
 //
 ////	char* answer = (char*)malloc(strlen(s)); //내가 쓴 할당방식 (안되는이유 밑 주석 참고)
@@ -131,7 +130,7 @@
 //	printf("%s", res);
 //	free(res);
 //}
-///* 나의 경우 
+/* 나의 경우 
 //문자열이 짝수일때 문자두개를 출력하기 위해 answer의 0번에 s문자열의 중간 첫글자와, answer 1번에 s문자열 중간 다음글자만 대입한후 실행해보았더니
 //세그먼트오류가 났다. 세그먼트오류가 무엇인지 구글링을해보니 메모리관련 오류라는 점을 알아냈고 메모리 관련 오류가 무엇이 있을지 생각해보다가
 //answer가 문자열로 찍힐것이면 문자가 어디서 끝나는지 명확해야된다는것을 알아냈고 각 단어의 마지막에 널문자까지 대입하여 해당문자열이 끝났다는것을 표현했더니 오류가 해결되었다.
@@ -143,11 +142,9 @@
 //이 경우에 메모리를 침범하고 있는 것이다. 
 //그렇기때문에 위의 문제의 경우 strlen으로 길이값만큼 동적할당을 하는게 문제상은 오류가없지만 버퍼를 침범할수있기때문에  최대값만큼 할당을 정해놓으면 된다.
 //고로 malloc(3)으로 3바이트를 동적할당해놓고 하면 된다. (제한사항이 길이가 1이상 100이하이기때문에 최소 1 ~ 최대 3 바이트만큼 할당하면됨.
-//*/
+*/
 
-
-
-///*==================문자열 내림차순으로 배치하기===================*/
+/* 7 ==================문자열 내림차순으로 배치하기===================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -214,7 +211,7 @@
 이런식으로 대문자일 경우와 소문자인경우가 참일때로 조건을 줬는데 조건식이 돌아가지않아서 아닌경우들을 if ~ elseif문으로 지정해 수정했고 테스트케이스 출력이 올바르게 되는 것을 확인했다.
 */
 
-/*=========================약수의 합==============================*/
+/* 8 =========================약수의 합==============================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -263,7 +260,7 @@
 //	printf("%d\n", res);
 //}
 
-///*=========== 핸드폰 번호 가리기 ====================*/
+/* 9 =========== 핸드폰 번호 가리기 ====================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -305,15 +302,14 @@
 //	res = solution(pn3);
 //	printf("%s\n", res);
 //}
-///*
+/*
 //처음엔 strnset을 이용하여서 단순하게 바꾸는 문제인줄알고 풀었음 하지만 프로그래머스에서 에러가 났고 문제가 함수로 푸는게 아니라는 것을 깨닫고 다시 시도함
 //제한조건이 길이가 4이상 20이하인 문자열이기때문에 동적할당을 20을 주고 문자열의 마지막 4자리만 phone_number의 값이고 나머지는 *로 표현한다는 점에서 
 //전체 문자열길이에서 len-4 까지를 *을 대입하면 되겠다고 생각하고 값을 대입할 배열을 새로 선언하고 반복문을 통해 arr[0]부터 arr[len-5] 까지를 *을 넣고
 //arr[len-4] 부터 arr[len] 까지는 기존의 phone_number의 값을 그대로 대입시킨 후 answer 문자열포인터공간에 arr문자열을 strcpy를 통해 복사해 출력시킴
 //*/
 
-/*=============자릿수 더하기====================*/
-
+/* 10 =============자릿수 더하기====================*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -369,84 +365,15 @@
 //	res = solution(n);
 //	printf("%d\n", res);
 //}
-///*
+/*
 //문제를 너무 어렵게 생각하면 안됨. 
 //각 자릿수의 합을 구하는 공식이기 때문에 처음에 나는 int*형 c를 선언해 자연수의 길이만큼 할당해주고 for문을 돌려 c의 앞부터 
 //차례대로 n / 10^(len-i-1) 즉, 맨 앞자리의 10진수 자릿수씩 나눠서 나온 몫을 대입하고 그뒤 n은 나머지를 대입한 후 sum에 c[i]번지에 있는 값을 더해서 출력하려했다.
 //하지만 위의 주석과 같이 자연수 n의 길이를 구하려고 썼던 while문에서 n /= 10 을 반복해 구하는 식에서 나머지값을 추가해 그것을 더하면 되지 않나 라는 생각이 들었고 
 //그 생각을 반영해 수정해서 처리함
-//*/
-//
-///*=========숫자 문자열과 영단어 ============ (220901) */
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdio.h>
-//#include <stdbool.h>
-//#include <stdlib.h>
-//#include <string.h>
-//
-//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-//int solution(const char* s) {
-//	int answer = 0;
-//	int len = strlen(s);
-//	char* s2 = (char*)malloc(sizeof(char)* len);
-//
-//	char arr[10][6] = {"zero","one","two","three","four","five","six","seven","eight","nine" };
-//
-//	int temp = 0, pos = 0;
-//	int iter = 0;
-//
-//	char * ptr = NULL;
-//
-//	for (iter = 0; iter < 10; iter++)
-//		ptr = strstr(s, arr[i]);
-//
-//
-//	for (int i = 0; i < len; i++) {
-//		char* ptr = strstr(s, arr[i]);
-//
-//		if (ptr != NULL)		{
-//			s2[i] = i + 48;
-//			pos = strlen(ptr);
-//			s += pos;
-//
-//		}
-//
-//
-//		if (s[i] > 47 && s[i] < 58)		{
-//			strcpy(s2[i], s[i]);
-//		}
-//		
-//	}
-//
-//	for (int i = 0; i < strlen(s2) ; i++)
-//	{
-//		temp = (temp * 10) + (int)(s2[i] - 48);
-//	}		
-//	answer = temp;
-//	return answer;
-//}
-//
-//int main()
-//{
-//	
-//	int res;
-//
-//
-//	//char* s = "one4seveneight";
-//	//res = solution(s);
-//	//printf("%d\n", res);
-//
-//	char* s2 = "one";
-//	res = solution(s2);
-//	printf("%d\n", res);
-//}
+*/
 
-
-
-
-
-
-///*=========하샤드 수 ============*/
+/* 11 =========하샤드 수 ============*/
 //#define _CRT_SECURE_NO_WARNINGS
 //#include <stdio.h>
 //#include <stdbool.h>
@@ -473,7 +400,7 @@
 //}
 
 
-/////*========= 음양 더하기 ============*/
+/* 12 ========= 음양 더하기 ============*/
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -497,28 +424,8 @@
 //	answer = sum;
 //	return answer;
 //}
-
-/* ===================== 이상한 문자 만들기===================== */
-
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-
-//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
-//char* solution(const char* s) {
-//	// return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
-//	char* answer = (char*)malloc(strlen(s));
-//
-//	for (int i = 0; i < strlen(s); i++)
-//	{
-//		if(s[i])
-//	}
-//
-//	return answer;
-//}
-
  
-///* ===================== 콜라츠 추측 ===================== */
+/* 13 ===================== 콜라츠 추측 ===================== */
 //#include <stdio.h>
 //#include <stdbool.h>
 //#include <stdlib.h>
@@ -562,3 +469,163 @@
 //	res = solution(num);
 //	printf("%d\n", res);
 //}
+
+
+
+/* 14 ==========내적=================*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//// a_len은 배열 a의 길이입니다.
+//// b_len은 배열 b의 길이입니다.
+//int solution(int a[], size_t a_len, int b[], size_t b_len) {
+//	int answer = 1234567890;
+//	int i = 0;
+//	int sum = 0;
+//	for (i = 0; i < b_len; i++)
+//	{
+//		sum += a[i] * b[i];
+//	}
+//	answer = sum;
+//
+//	return answer;
+//}
+
+///* 15 =========== 문자열을 정수로 바꾸기 ============= */
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int solution(const char* s) {
+//	int answer = 0;
+//	int temp = 0;
+//	int len = strlen(s);
+//	int i = 1;
+//
+//	if (s[0] != '+' && s[0] != '-')
+//		i = 0;
+//
+//	for (; i < len; i++)
+//	{
+//		answer = (answer * 10) + (int)(s[i] - 48);
+//	}
+//
+//	if (s[0] == '-')
+//		answer *= -1;
+//
+//	return answer;
+//}
+
+///* 16 ================== 수박수박수 ========================*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//char* solution(int n) {
+//	// 리턴할 값은 메모리를 동적 할당해주세요.
+//	char* answer = (char*)malloc(sizeof(char)*n * 3);
+//	char su[] = "수";
+//	char back[] = "박";
+//	int i = 0;
+//
+//	for (i = 0; i < n; i++)
+//	{
+//		if (i == 0) strcpy(answer, "수");
+//
+//		else if (i % 2 == 0) {
+//			strcat(answer, su);
+//		}
+//
+//		else {
+//			strcat(answer, back);
+//		}
+//
+//	}
+//	return answer;
+//}
+
+
+/* 17 ================== 숫자 문자열과 영단어(카카오) ============================*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int solution(const char* s) {
+//	int answer = 0;
+//
+// char* scpy = s; // 굳이 동적할당을 할 필요가 없음 (why? => s문자열이 주어져있기 때문에 scpy에 새로운 크기의 동적할당을 할 필요가 없다.
+//
+//	/* 내가 한 것
+//	char* scpy = (char*)malloc(strlen(s)); //이 코드를 할 필요가 없다. 그리고 동적할당을 했다면 free로 해제하는거 까먹지 말것	
+//	strcpy(scpy, s); //s가 const로 지정되어있어 문자비교할때 넘기는게 불가하기에 같은값을 복사해 비교하기위한 scpy선언 및 s 문자열 복사
+//	int len = strlen(s); (for문에서 쓰려고 했던거 지우는거 잊음)
+//	char num[][6] = { "zero","one","two","three","four","five","six","seven","eight","nine" }; (strstr로 비교하려쓴 코드 지우는거 잊음)
+//	*/
+//
+//	while (scpy[0] != '\0') {
+//		switch (scpy[0]) {
+//		case 'z':
+//			answer = answer * 10;
+//			scpy = scpy + 4;
+//			break;
+//		case 'o':
+//			answer = answer * 10 + 1;
+//			scpy = scpy + 3;
+//			break;
+//		case 't':
+//			scpy++;
+//			if (scpy[0] == 'w') {
+//				answer = answer * 10 + 2;
+//				scpy = scpy + 2;
+//				break;
+//			}
+//			else {
+//				answer = answer * 10 + 3;
+//				scpy = scpy + 4;
+//				break;
+//			}
+//		case 'f':
+//			scpy++;
+//			if (scpy[0] == 'o') {
+//				answer = answer * 10 + 4;
+//				scpy = scpy + 3;
+//				break;
+//			}
+//			else {
+//				answer = answer * 10 + 5;
+//				scpy = scpy + 3;
+//				break;
+//			}
+//		case 's':
+//			scpy++;
+//			if (scpy[0] == 'i') {
+//				answer = answer * 10 + 6;
+//				scpy = scpy + 2;
+//				break;
+//			}
+//			else {
+//				answer = answer * 10 + 7;
+//				scpy = scpy + 4;
+//				break;
+//			}
+//		case 'e':
+//			answer = answer * 10 + 8;
+//			scpy = scpy + 5;
+//			break;
+//		case 'n':
+//			answer = answer * 10 + 9;
+//			scpy = scpy + 4;
+//			break;
+//		default:
+//			answer = (answer * 10) + (int)(scpy[0] - 48);
+//			scpy++;
+//			break;
+//		}
+//	}
+//	return answer;
+//}
+
