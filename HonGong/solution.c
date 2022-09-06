@@ -629,3 +629,57 @@
 //	return answer;
 //}
 
+/* 18 ================== 신고 결과 받기(카카오) ============================*/
+//#include <stdio.h>
+//#include <stdbool.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//// id_list_len은 배열 id_list의 길이입니다.
+//// report_len은 배열 report의 길이입니다.
+//// 파라미터로 주어지는 문자열은 const로 주어집니다. 변경하려면 문자열을 복사해서 사용하세요.
+//int* solution(const char* id_list[], size_t id_list_len, const char* report[], size_t report_len, int k) {
+//	// return 값은 malloc 등 동적 할당을 사용해주세요. 할당 길이는 상황에 맞게 변경해주세요.
+//	int* answer = (int*)calloc(id_list_len, sizeof(int));
+//
+//	int check[id_list_len][id_list_len];// 신고유무 체크할 2차원배열
+//	int count[id_list_len]; // 신고받은ID 신고횟수저장 배열 
+//	char* user_id;      // 신고한 ID 저장변수
+//	char* report_id;  // 신고받은 ID 저장변수
+//	int user_id_num = 0;    //신고한 ID가 있는 행 저장변수
+//	int report_id_num = 0;  //신고받은 ID가 있는 행 저장변수
+//
+//	for (int i = 0; i < id_list_len; i++) { //배열들 0으로 초기화
+//		count[i] = 0;
+//		for (int j = 0; j < id_list_len; j++) {
+//			check[i][j] = 0;
+//		}
+//	}
+//
+//	for (int i = 0; i < report_len; i++) {  // 신고목록길이만큼 반복         
+//		user_id = strtok(report[i], " ");    //신고한 ID 저장
+//		report_id = strtok(NULL, " ");  //신고당한 ID 저장
+//
+//		for (int j = 0; j < id_list_len; j++) { // id_list들과 비교            
+//			if (strcmp(user_id, id_list[j]) == 0) // 신고한 ID가 id_list에 있는 위치를
+//				user_id_num = j;                 // 위치변수에 해당위치 번호 저장
+//
+//			else if (strcmp(report_id, id_list[j]) == 0) // 신고당한 ID가 id_list에 있는 위치
+//				report_id_num = j;
+//		}
+//
+//		if (check[user_id_num][report_id_num] == 0) { //(중복체크)해당 2차원배열위치가 0(체크안됨)이면 1로 체크     
+//			check[user_id_num][report_id_num] = 1;
+//			count[report_id_num] ++;                //1되었을때 신고당한ID 위치 체크 갯수 증가시킴
+//		}
+//	}
+//
+//	for (int i = 0; i < id_list_len; i++) {
+//		for (int j = 0; j < id_list_len; j++) {
+//			if (check[i][j] > 0 && count[j] >= k)       //이차원배열에 체크가 되어있고, 신고당한ID 갯수가 k이상인 경우
+//				answer[i] ++;                           //id_list순서에 맞게 1씩 증가
+//		}
+//	}
+//
+//	return answer;
+//}
