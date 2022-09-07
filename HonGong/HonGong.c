@@ -1218,3 +1218,24 @@ int sum(int a)
 //	s = solution(s);
 //	printf("%s", s);
 //}
+
+
+//int getIndex(char* name , const char* id_list[], size_t id_list_len)
+//{
+//	int i = 0;
+//	for (i = 0; i < id_list_len; i++)
+//	{
+//		if (strcmp(id_list[i], name) == 0)
+//			return i;
+//	}
+//	return -1;
+//}
+
+void main(void) {
+	char str[32] = "You are beautiful";
+	char str2[] = "very ";
+
+	memmove(str + 13, str + 8, 10);
+	memmove(str + 8, str2, strlen(str2));
+	puts(str);
+}

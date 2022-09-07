@@ -84,7 +84,7 @@ char* my_strncpy(char* dest, const char* src, int n) {
 //	my_strcat(dest2, "src");
 //	printf("my_strcat func ------> %s\n", dest2);
 //
-//	strcpy(dest3_c, dest3);
+//	my_strcpy(dest3_c, dest3);
 //	my_strcat(dest3_c, dest3);
 //	printf("make func --------> %s\n", dest3_c);
 //
@@ -121,7 +121,7 @@ char* my_strcat(char* dest, const char* src) {
 //	my_strncat(dest2, "src", 2);
 //	printf("my_strncat func ------> %s\n", dest2);
 //
-//	strcpy(dest3_c, dest3);
+//	my_strcpy(dest3_c, dest3);
 //	my_strncat(dest3_c, dest3, 2);
 //	printf("my_strncat func ------> %s\n", dest3_c);
 //
@@ -227,3 +227,89 @@ int my_strncmp(char* dest, const char* src, int n) {
 	}
 	return 0;
 }
+
+/* ======================================================= strchr 구현*/
+//char* my_strchr(char* dest, char c);
+//
+//void main() {
+//	char dest1[] = "dest1dest2";
+//	char dest2[] = "dest1dest2";
+//	char dest3[] = "dest1dest2";
+//	char* res2 = "dest1dest2";
+//	char* res;
+//	int count = 0;
+//	int count2 = 0;
+//
+//	res = strchr(dest1, '1');
+//	printf("strchr func ------>%s\n", res);
+//
+//	res = my_strchr(dest2, '1');
+//	printf("my_strncat func ------>%s\n", res);
+//
+//	res = dest3;
+//	for ( ; ; ) {
+//		res = strchr(res, 'd');
+//		if (res == NULL) {
+//			break;
+//		}
+//		count2++;
+//		res++;
+//	}
+//	printf("strchr ---------> d가 %d개\n", count2);
+//
+//	res = dest3;
+//	for ( ; ; ) {
+//		res = my_strchr(res, 'd');
+//		if (res == NULL) {
+//			break;
+//		}
+//		count++;
+//		res++;
+//	}
+//	printf("my_strchr ---------> d가 %d개\n", count);
+//}
+
+////예전에는 int 형으로 c를 선언했는데 그건 옛버젼의 잔재임. 현재 아래오같이 선언한대로 써도 무방, int공간 4바이트, char1바이트이기에 글자하나 찾는건 char가 공간효율 있음
+char* my_strchr(char* dest, const char c) {
+	while (*dest != '\0') {
+		if (*dest == c) return dest;
+		if (*dest != c) {
+			dest++;
+		}
+	}
+	if(*dest == '\0') 
+		return NULL;
+}
+
+/* ======================================================= strstr 구현*/
+//char* my_strstr(char* dest, char* src);
+//
+//void main() {
+//	char* dest1 = "Hellodest1";
+//	char* dest2 = "Hellodest2";
+//	char* ptr;
+//
+//	ptr = strstr(dest1, "de");
+//	printf("%s\n", ptr);
+//	
+//	ptr = my_strstr(dest2, "de");
+//	printf("%s\n", ptr);
+//
+//}
+//char* my_strstr(char* dest, char* src) {
+//	int count = 0;
+//	int i;
+//	
+//	while (dest[0] != src[0]) {
+//		dest++;
+//		for (i = 0; i < strlen(src); i++) {
+//			if (dest[i + 1] == src[i + 1])
+//				continue;
+//			if (dest[i + 1] != src[i + 1])
+//				break;
+//		}
+//	}
+//	
+//	
+//
+//}
