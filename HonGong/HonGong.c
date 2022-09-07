@@ -1231,11 +1231,11 @@ int sum(int a)
 //	return -1;
 //}
 
-void main(void) {
-	char str[32] = "You are beautiful";
-	char str2[] = "very ";
-
-	memmove(str + 13, str + 8, 10);
-	memmove(str + 8, str2, strlen(str2));
-	puts(str);
-}
+//void main(void) {
+//	char str[32] = "You are beautiful";
+//	char str2[] = "very ";
+//
+//	memmove(str + 13, str + 8, 10);
+//	memmove(str + 8, str2, strlen(str2));
+//	puts(str);
+//}

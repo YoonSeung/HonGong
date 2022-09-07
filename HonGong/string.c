@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
 /* ============================================= strcpy 备泅*/
 //char* my_strcpy(char* dest, const char* src);
 //
@@ -281,35 +279,55 @@ char* my_strchr(char* dest, const char c) {
 		return NULL;
 }
 
-/* ======================================================= strstr 备泅*/
-//char* my_strstr(char* dest, char* src);
-//
+/* ======================================================= strlen 备泅*/
+//int my_strlen(char* dest);
 //void main() {
-//	char* dest1 = "Hellodest1";
-//	char* dest2 = "Hellodest2";
-//	char* ptr;
+//	char dest1[] = "Hellodest1";
+//	char dest2[] = "Hellodest2";
+//	int len = 0;
 //
-//	ptr = strstr(dest1, "de");
-//	printf("%s\n", ptr);
-//	
-//	ptr = my_strstr(dest2, "de");
-//	printf("%s\n", ptr);
+//	len = strlen(dest1);
+//	printf("%d\n", len);
 //
+//	len = my_strlen(dest2);
+//	printf("%d\n", len);
 //}
-//char* my_strstr(char* dest, char* src) {
-//	int count = 0;
-//	int i;
-//	
-//	while (dest[0] != src[0]) {
-//		dest++;
-//		for (i = 0; i < strlen(src); i++) {
-//			if (dest[i + 1] == src[i + 1])
-//				continue;
-//			if (dest[i + 1] != src[i + 1])
-//				break;
-//		}
-//	}
-//	
-//	
-//
-//}
+
+int my_strlen(char* dest) {
+	int count = 0;
+	while (*dest != NULL) {
+		dest++;
+		count++;
+	}
+	return count;
+}
+
+/* ======================================================= strstr 备泅*/
+char* my_strstr(char* dest, char* src);
+
+void main() {
+	char* dest1 = "Hellodest1";
+	char* dest2 = "Hellodest2";
+	char* ptr;
+
+	ptr = strstr(dest1, "de");
+	printf("%s\n", ptr);
+	
+	ptr = my_strstr(dest2, "de");
+	printf("%s\n", ptr);
+
+}
+char* my_strstr(char* dest, char* src) {
+	int count = 0;
+	int i;
+	
+	while (dest[0] != src[0]) {
+		dest++;
+		for (i = 0; i < my_strlen(src); i++) {
+			if (dest[i + 1] == src[i + 1])
+				continue;
+			if (dest[i + 1] != src[i + 1])
+				break;
+		}
+	}
+}
