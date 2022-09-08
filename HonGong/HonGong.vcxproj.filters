@@ -48,5 +48,14 @@
     <ClCompile Include="prac.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="file.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="liked list.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="linkedlist.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

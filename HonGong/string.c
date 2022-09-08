@@ -303,31 +303,30 @@ int my_strlen(char* dest) {
 }
 
 /* ======================================================= strstr ±¸Çö*/
-char* my_strstr(char* dest, char* src);
-
-void main() {
-	char* dest1 = "Hellodest1";
-	char* dest2 = "Hellodest2";
-	char* ptr;
-
-	ptr = strstr(dest1, "de");
-	printf("%s\n", ptr);
-	
-	ptr = my_strstr(dest2, "de");
-	printf("%s\n", ptr);
-
-}
-char* my_strstr(char* dest, char* src) {
-	int count = 0;
-	int i;
-	
-	while (dest[0] != src[0]) {
-		dest++;
-		for (i = 0; i < my_strlen(src); i++) {
-			if (dest[i + 1] == src[i + 1])
-				continue;
-			if (dest[i + 1] != src[i + 1])
-				break;
-		}
-	}
-}
+//char* my_strstr(char* dest, char* src);
+//
+//void main() {
+//	char* dest1 = "Hellodest1";
+//	char* dest2 = "Hellodest2";
+//	char* ptr;
+//
+//	ptr = strstr(dest1, "de");
+//	printf("%s\n", ptr);
+//	
+//	ptr = my_strstr(dest2, "de");
+//	printf("%s\n", ptr);
+//
+//}
+//char* my_strstr(char* dest, char* src) {
+//	int count = 0;
+//	int i;
+//	
+//	while (dest[0] != src[0]) {
+//		dest++;
+//	}
+//	if (dest[0] == src[0]) {
+//		for (i = 0; i < my_strlen(src); i++) {
+//
+//		}
+//	}
+//}

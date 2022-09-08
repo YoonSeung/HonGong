@@ -126,9 +126,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="codeup.c" />
+    <ClCompile Include="file.c" />
     <ClCompile Include="HonGong.c">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="liked list.c" />
+    <ClCompile Include="linkedlist.c" />
     <ClCompile Include="Pointer.c" />
     <ClCompile Include="prac.c" />
     <ClCompile Include="solution.c" />
