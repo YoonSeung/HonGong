@@ -369,15 +369,17 @@ char *my_strtok(char *dest, const char *separator) {
 		int len, len2;
 		int i, j;
 
-		if (dest!=NULL)//비교문자열 있을때 pos에 dest문자열주소 대입
+		//비교문자열 있을때 pos에 dest문자열주소 대입
+		if (dest!=NULL)
 		{
 			pos = dest;
 		}
 
-		len = my_strlen(pos); //pos 문자열 길이 계산
-		len2 = my_strlen(separator);//separator 문자열 길이 계산
+		//pos ,separator 문자열 길이 계산
+		len = my_strlen(pos); 
+		len2 = my_strlen(separator);
 
-		//구분자 문자열들과 dest문자열 비교 
+		//구분자 문자열들과 dest문자열 비교해서 다른문자열 나올때까지 반복 
 		for (i = 0; i < len; i++)
 		{
 			for (j = 0; j < len2; j++)
@@ -391,11 +393,12 @@ char *my_strtok(char *dest, const char *separator) {
 			{
 				break;
 			}
-			pos = pos + i;//pos와 separator의 다른 문자가 처음나온 위치로 지정
+			//pos를 separator와 다른 문자가 처음나온 위치로 지정
+			pos = pos + i;
 		}
 
 		
-		for (i = 0; i < len; i++) //
+		for (i = 0; i < len; i++)
 		{
 			for (j = 0; j < len2; j++)
 			{
@@ -404,14 +407,19 @@ char *my_strtok(char *dest, const char *separator) {
 					break;
 				}
 			}
-			if (j < len2) //separator에 같은 문자가 있으면
+
+			//separator에 같은 문자가 있으면
+			if (j < len2) 
 			{
-				my_strncpy(buffer, pos, i);//부분 문자열 복사
-				buffer[i] = '\0';//종료 문자 대입
-				pos = pos + i + 1;//pos 위치는 다음으로 이동
-				return buffer;//복사한 문자열 반환
+				//부분 문자열 복사
+				my_strncpy(buffer, pos, i);
+				//문자열 마지막 종료 문자 대입
+				buffer[i] = '\0';
+				//pos 위치는 다음으로 이동
+				pos = pos + i + 1;
+				//복사한 문자열 반환
+				return buffer;
 			}
 		}
-
 		return NULL;
 	}
