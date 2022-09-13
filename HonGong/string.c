@@ -375,7 +375,7 @@ char *my_strtok(char *dest, const char *separator) {
 		}
 
 		len = my_strlen(pos); //pos 문자열 길이 계산
-		len2 = my_strlen(separator);//delimeters 문자열 길이 계산
+		len2 = my_strlen(separator);//separator 문자열 길이 계산
 
 		//구분자 문자열들과 dest문자열 비교 
 		for (i = 0; i < len; i++)
@@ -391,11 +391,11 @@ char *my_strtok(char *dest, const char *separator) {
 			{
 				break;
 			}
-			pos = pos + i;//pos와 delimeters의 다른 문자가 처음나온 위치로 지정
+			pos = pos + i;//pos와 separator의 다른 문자가 처음나온 위치로 지정
 		}
 
 		
-		for (i = 0; i < len; i++) // 구분자
+		for (i = 0; i < len; i++) //
 		{
 			for (j = 0; j < len2; j++)
 			{
@@ -404,7 +404,7 @@ char *my_strtok(char *dest, const char *separator) {
 					break;
 				}
 			}
-			if (j < len2) //delimeters에 같은 문자가 있으면
+			if (j < len2) //separator에 같은 문자가 있으면
 			{
 				my_strncpy(buffer, pos, i);//부분 문자열 복사
 				buffer[i] = '\0';//종료 문자 대입
