@@ -341,9 +341,8 @@ int main(void)
 	char *Separator = " ,.";
 	char * dest;
 
-	printf("원본: %s\n", str);
-	//strtok 함수 이용
-	printf("== 공백이나 콤마, 느낌표, 마침표를 기준으로 분할 ==\n");
+	printf("strtok 원본: %s\n", str);
+
 	dest = strtok(str, Separator);  
 	while (dest != NULL)
 	{
@@ -352,9 +351,8 @@ int main(void)
 	}
 	printf("\n");
 
-	printf("원본: %s\n", str2);
-	//my_strtok 함수 이용
-	printf("== 공백이나 콤마, 느낌표, 마침표를 기준으로 분할 ==\n");
+	printf("my_strtok 원본: %s\n", str2);
+
 	dest = my_strtok(str2, Separator);
 	while (dest != NULL)
 	{
@@ -389,15 +387,15 @@ char *my_strtok(char *dest, const char *separator) {
 					break;
 				}
 			}
-			if (j == len2)//같은 것이 없으면
+			if (j == len2)
 			{
-				break;//반복문 탈출
+				break;
 			}
-			pos = pos + i;//pos를 delimeters와 다른 문자가 처음나온 위치로 설정
+			pos = pos + i;//pos와 delimeters의 다른 문자가 처음나온 위치로 지정
 		}
 
 		
-		for (i = 0; i < len; i++)
+		for (i = 0; i < len; i++) // 구분자
 		{
 			for (j = 0; j < len2; j++)
 			{
@@ -406,7 +404,7 @@ char *my_strtok(char *dest, const char *separator) {
 					break;
 				}
 			}
-			if (j < len2)//delimeters에 같은 문자가 있으면
+			if (j < len2) //delimeters에 같은 문자가 있으면
 			{
 				my_strncpy(buffer, pos, i);//부분 문자열 복사
 				buffer[i] = '\0';//종료 문자 대입
