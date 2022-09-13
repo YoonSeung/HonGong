@@ -409,7 +409,7 @@ char *my_strtok(char *dest, const char *separator) {
 			if (j < len2)//delimeters에 같은 문자가 있으면
 			{
 				my_strncpy(buffer, pos, i);//부분 문자열 복사
-				buffer[i] = 0;//종료 문자 대입
+				buffer[i] = '\0';//종료 문자 대입
 				pos = pos + i + 1;//pos 위치는 다음으로 이동
 				return buffer;//복사한 문자열 반환
 			}
