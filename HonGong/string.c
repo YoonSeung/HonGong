@@ -334,38 +334,39 @@ int my_strlen(char *dest) {
 /* ======================================================= strtok 구현*/
 char *my_strtok(char *dest, const char *Separator);
 
-int main(void)
-{
-	char str[200] = "dest dest1,dest2.dest3";
-	char str2[200] = "dest dest1,dest2.dest3";
-	char *Separator = " ,.";
-	char * dest;
+//int main(void)
+//{
+//	char str[200] = "dest dest1,dest2.dest3";
+//	char str2[200] = "dest dest1,dest2.dest3";
+//	char *Separator = " ,.";
+//	char * dest;
+//
+//	printf("strtok 원본: %s\n", str);
+//
+//	dest = strtok(str, Separator);  
+//	while (dest != NULL)
+//	{
+//		printf("%s\n", dest);
+//		dest = strtok(NULL, Separator);
+//	}
+//	printf("\n");
+//
+//	printf("my_strtok 원본: %s\n", str2);
+//
+//	dest = my_strtok(str2, Separator);
+//	while (dest != NULL)
+//	{
+//		printf("%s\n", dest);
+//		dest = my_strtok(NULL, Separator);
+//	}
+//
+//
+//}
 
-	printf("strtok 원본: %s\n", str);
-
-	dest = strtok(str, Separator);  
-	while (dest != NULL)
-	{
-		printf("%s\n", dest);
-		dest = strtok(NULL, Separator);
-	}
-	printf("\n");
-
-	printf("my_strtok 원본: %s\n", str2);
-
-	dest = my_strtok(str2, Separator);
-	while (dest != NULL)
-	{
-		printf("%s\n", dest);
-		dest = my_strtok(NULL, Separator);
-	}
-
-
-}
 
 char *my_strtok(char *dest, const char *separator) {
 		static char *pos = NULL;
-		static char buffer[256];
+		static char buffer[100];
 		int len, len2;
 		int i, j;
 

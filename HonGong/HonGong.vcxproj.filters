@@ -54,5 +54,14 @@
     <ClCompile Include="linkedlist.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="DoubleLinkedList.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="sortSingleLinkedList.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SortSingleList2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -126,6 +126,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="codeup.c" />
+    <ClCompile Include="DoubleLinkedList.c" />
     <ClCompile Include="file.c" />
     <ClCompile Include="HonGong.c">
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -134,6 +135,8 @@
     <ClCompile Include="Pointer.c" />
     <ClCompile Include="prac.c" />
     <ClCompile Include="solution.c" />
+    <ClCompile Include="sortSingleLinkedList.c" />
+    <ClCompile Include="SortSingleList2.c" />
     <ClCompile Include="string.c" />
     <ClCompile Include="문자열.c" />
     <ClCompile Include="배열.c" />

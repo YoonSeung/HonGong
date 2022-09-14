@@ -44,3 +44,8 @@
 //
 //	return answer;
 //}
+
+//*head = node;	}
+//	else if (p->data > node->data) // 빈리스트는 아니지만 헤드의 앞에 삽입하고 싶을때	
+//{		node->link = p;		
+//		*head = node;	}
