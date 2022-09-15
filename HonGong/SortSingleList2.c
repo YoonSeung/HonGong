@@ -4,16 +4,15 @@
 #include<string.h>
 
 typedef struct NODE {
-	int index;
 	char *name;
+	int index;
 	struct NODE *next;
 }NODE;
 
 
 void InitList();
-NODE *InsertNode(NODE *Target, int *index, char *name);
-//NODE *SortInsertNode(NODE *Target, NODE *newNode);
-NODE *SortInsertNode(NODE *Target, int *index, char *name);
+//NODE *InsertNode(NODE *Target, NODE *newNode);
+NODE *SortInsertNode(NODE *Target, NODE *newNode);
 bool DeleteNode(NODE *Target);
 void UnInitList();
 NODE *head;
@@ -22,9 +21,8 @@ void test();
 
 void main() {
 	InitList();
+	
 	test();
-	printf("===인덱스, 이름입력후 리스트===\n");
-	printNode();
 	
 	UnInitList();
 }
@@ -32,17 +30,26 @@ void main() {
 void test() {
 
 	int i = 0;
-	NODE *Now;
-	Now = head;
-	char *name = malloc(sizeof(char*)) ;
+	NODE *Now,*pre, Temp;
+	pre = head;
+	Now = (NODE*)malloc(sizeof(NODE));
+	memset(&Now, 0x00, sizeof(NODE));
+	int len = 10;
 
-	while (i < 99) {
-		if (i == 99) break;
+	printf("===입력===\n");
+	while(i<99){
+		char *name = (char*)malloc(len * sizeof(char));
 		scanf("%d %s", &i, name);
-		name = (char*)realloc(name, sizeof(char)*strlen(name));
-		Now = SortInsertNode(Now, &i, name);
+		Temp.index = i;
+		Temp.name = name;
+		pre = SortInsertNode(pre, &Temp);
+
 	}
 
+	printf("===인덱스, 이름입력후 리스트===\n");
+	printNode();
+
+	
 }
 
 void printNode()
@@ -60,37 +67,38 @@ void InitList() {
 }
 
 //Target노드 다음에 새로운 노드 삽입함수(정렬x)
-NODE *InsertNode(NODE *Target, int *index, char *name) {
-
-	NODE *New = (NODE *)malloc(sizeof(NODE));
-
-	New->index = *index;
-	strcpy(New->name, name);
-
-	New->next = Target->next;
-	Target->next = New;
-
-	return New;
-
-}
+//NODE *InsertNode(NODE *Target, NODE *newNode) {
+//
+//	NODE *New = (NODE *)malloc(sizeof(NODE));
+//
+//	New->index = newNode->index;
+//	New->name = newNode->name;
+//	
+//	New->next = Target->next;
+//	Target->next = New;
+//
+//	return New;
+//
+//}
 
 //오름차순 정렬 삽입
-NODE *SortInsertNode(NODE *Target, int *index, char *name) {
+NODE *SortInsertNode(NODE *Target, NODE *newNode) {
 
 	NODE *New = (NODE *)malloc(sizeof(NODE));
-	New->index = *index;
-	strcpy(New->name, name);
+	memset(&New, 0x00, sizeof(NODE));
+
+	New->index = newNode->index;
+	strcpy(New->name, newNode->name);
 
 
-	if (Target->index > New->index) {
+	if (Target->next == NULL) {
 		New->next = Target->next;
-		Target = New;
+		Target->next = New;
 	}
 	else {
 		while (Target->next != NULL && Target->next->index < New->index) {
 			Target = Target->next;
 		}
-
 		New->next = Target->next;
 		Target->next = New;
 	}
