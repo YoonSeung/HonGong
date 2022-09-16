@@ -125,6 +125,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="B2h.c" />
     <ClCompile Include="codeup.c" />
     <ClCompile Include="DoubleLinkedList.c" />
     <ClCompile Include="file.c" />

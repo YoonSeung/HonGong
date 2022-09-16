@@ -1,9 +1,9 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h> //동적할당을 위해 쓸때 사용하는 헤더
 #include<string.h>
 #include <stdbool.h>
+#include<Windows.h>
 
 
 /*int main(void) {
@@ -1238,4 +1238,21 @@ int sum(int a)
 //	memmove(str + 13, str + 8, 10);
 //	memmove(str + 8, str2, strlen(str2));
 //	puts(str);
+//}
+
+//int main() {
+//	int i=5;
+//	puts("5초 후에 이 문구가 사라집니다.");
+//	Sleep(1000);
+//	while(i!=0){
+//		printf("%d\n", i);
+//		Sleep(1000);
+//		i--;
+//	}
+//	system("cls");
+//	puts("사라졌습니다");
+//	Sleep(3000);
+//	puts("신기하죠?");
+//	Sleep(1000);
+//	puts("고생하셨습니다");
 //}

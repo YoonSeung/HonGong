@@ -63,5 +63,8 @@
     <ClCompile Include="SortSingleList2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="B2h.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
