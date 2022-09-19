@@ -1,81 +1,65 @@
-//#include<stdio.h>	
-//#include<stdlib.h>
-//#include<string.h>
-//
-//char *b2h(const unsigned char *bin, size_t len) {
-//	char *out;
-//	size_t i;
-//
-//	if (bin == NULL || len == 0)
-//		return NULL;
-//
-//	out = malloc(len * 2 + 1);
-//	for (i = 0; i < len; i++) {
-//		out[i * 2] = "0123456789ABCDEF"[bin[i] >> 4];
-//		out[i * 2+1] = "0123456789ABCDEF"[bin[i] & 0x0F];
-//	}
-//	out[len * 2] = '\0';
-//
-//	return out;
-//}
-//
-//int hexchr2bin(const char hex, char *out) {
-//	if (out == NULL)
-//		return 0;
-//	size_t
-//	if (hex >= '0' && hex <= '9') {
-//		*out = hex - '0';
-//	}
-//	else if (hex >= 'A'&&hex <= 'F') {
-//		*out = hex - 'A' + 10;
-//	}
-//	else if (hex >= 'a'&&hex <= 'f') {
-//		*out = hex - 'a' + 10;
-//	}
-//	else {
-//		return 0;
-//	}
-//	return 1;
-//}
-//
-//size_t h2b(const char *hex, unsigned char **out) {
-//	size_t len;
-//	char b1;
-//	char b2;
-//	size_t i;
-//	if (hex == NULL || *hex == '\0' || out == NULL)
-//		return 0;
-//
-//	len = strlen(hex);
-//
-//	if (len % 2 != 0)
-//		return 0;
-//	len /= 2;
-//
-//	*out = malloc(len);
-//	memset(*out, 'A', len);
-//	for (i = 0; i < len; i++) {
-//		if (!hexchr2bin(hex[i * 2], &b1) || !hexchr2bin(hex[i * 2 + 1], &b2)) {
-//			return 0;
-//		}
-//		(*out)[i] = (b1 << 4) | b2;
-//	}
-//	return len;
-//}
-//
+#include<stdio.h>	
+#include<stdlib.h>
+#include<string.h>
+
+
+void print_hex(const char *buf, int size);
+
+void main() {
+	char *test_str = "my name is cos\nhappy life is to observe myself"; // 이렇게 주어진 상수 문자열 말고 txt파일을 hex하는 방법을 찾아보자
+	print_hex(test_str, strlen(test_str));
+}
+void print_hex(const char *buf, int size) {
+	int i;
+
+	for (i = 0; i < size; i++) {
+		if (i % 16 == 0)
+			printf("\n");
+
+		printf("%02X ", buf[i]);
+
+	}
+}
+
 //int main() {
-//	const char *a = "Test 123! - jklmn";
-//	char *hex;
-//	unsigned char *bin;
-//	size_t binlen;
-//
-//	hex = b2h((unsigned char *)a, strlen(a));
-//	printf("%s\n", hex);
-//
-//	binlen = hexchr2bin(hex, &bin);
-//	printf("%.*s\n", (int)binlen, (char *)bin);
-//
-//	free(bin);
-//	free(hex);
-//	return 0;
+//	FILE *fp = fopen("test.txt", "r");
+//	int len = 0;
+//	fseek(fp, 0, SEEK_END);
+//	len = ftell(fp);
+//	rewind(fp);
+//	print_hex(fp, len);
 //}
+//
+//void main() {
+//	FILE *src, *dest;
+//	char buf[5];
+//	int nread;
+//	int i = 0;
+//	char cpydata[10];
+//
+//	src = fopen("test.txt", "rb");
+//	if (src != NULL) {
+//
+//		dest = fopen("test_hex_file.txt", "wb");
+//		if (dest == NULL) printf("실패");
+//
+//		if (dest != NULL) {
+//			while (!feof(src)) {
+//					nread=fread(buf, sizeof(char), 4, src);
+//
+//					/*인코딩 후 쓰게 하자*/
+//
+//
+//					
+//					fwrite(buf, sizeof(char), nread, dest);
+//
+//			}
+//			fclose(dest);
+//		}
+//		fclose(src);
+//		printf("성공");
+//	}
+//}
+//
+
+
