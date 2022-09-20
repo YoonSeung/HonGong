@@ -15,54 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HonGong.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Pointer.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="실전.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="프로그래머스.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="문자열.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="배열.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="완벽정리.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="codeup.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="solution.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="string.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="prac.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="file.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="linkedlist.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="DoubleLinkedList.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="sortSingleLinkedList.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SortSingleList2.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="B2h.c">
       <Filter>소스 파일</Filter>
     </ClCompile>

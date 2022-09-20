@@ -126,24 +126,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="B2h.c" />
-    <ClCompile Include="codeup.c" />
-    <ClCompile Include="DoubleLinkedList.c" />
-    <ClCompile Include="file.c" />
-    <ClCompile Include="HonGong.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="linkedlist.c" />
-    <ClCompile Include="Pointer.c" />
-    <ClCompile Include="prac.c" />
-    <ClCompile Include="solution.c" />
-    <ClCompile Include="sortSingleLinkedList.c" />
-    <ClCompile Include="SortSingleList2.c" />
-    <ClCompile Include="string.c" />
-    <ClCompile Include="문자열.c" />
-    <ClCompile Include="배열.c" />
-    <ClCompile Include="실전.c" />
-    <ClCompile Include="완벽정리.c" />
-    <ClCompile Include="프로그래머스.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
