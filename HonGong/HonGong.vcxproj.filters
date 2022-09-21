@@ -18,5 +18,14 @@
     <ClCompile Include="B2h.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="fileT2HandH2T.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="T2H_input.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
