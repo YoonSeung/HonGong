@@ -125,9 +125,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="B2h.c" />
-    <ClCompile Include="base64.c" />
-    <ClCompile Include="fileT2HandH2T.c" />
+    <ClCompile Include="b2c_del.c" />
+    <ClCompile Include="b2H.c" />
+    <ClCompile Include="b64.c" />
+    <ClCompile Include="T2H.c" />
+    <ClCompile Include="fileB2HandH2B.c" />
     <ClCompile Include="T2H_input.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

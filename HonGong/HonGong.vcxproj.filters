@@ -15,16 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="B2h.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="fileT2HandH2T.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="T2H_input.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="base64.c">
+    <ClCompile Include="T2H.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="b64.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="b2H.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fileB2HandH2B.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="b2c_del.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

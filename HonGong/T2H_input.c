@@ -7,7 +7,7 @@
 //
 //int main() {
 //	char *test_str;
-//	test_str = (char *)calloc(1000, sizeof(char));
+//	test_str = (char *)calloc(1001, sizeof(char));
 //
 //	printf("원문 --->");
 //	fgets(test_str, 1000, stdin);
@@ -16,12 +16,16 @@
 //	char *T2H_str = (char*)calloc(test_str_len * 2 + 1, sizeof(char));
 //	char *H2T_str = (char*)calloc(test_str_len + 1, sizeof(char));
 //
+//	printf("원문 ---> %s", test_str);
+//	printf("크기---> %d\n", strlen(test_str) / sizeof(test_str));
+//
 //	T2H_func(test_str, test_str_len, T2H_str);
 //	printf("T2H ---> %s\n", T2H_str);
+//	printf("크기---> %d\n", strlen(T2H_str) / sizeof(T2H_str));
 //
 //	H2T_func(T2H_str, H2T_str);
 //	printf("H2T ---> %s\n", H2T_str);
-//
+//	printf("크기 ---> %d\n", strlen(H2T_str) / sizeof(H2T_str));
 //
 //	free(H2T_str);
 //	free(T2H_str);
@@ -33,6 +37,7 @@
 //	int i;
 //	char hexc[3] = { 0, };
 //	for (i = 0; i < Text_len; i++) {
+//		if (Text[i] == '\n') break;
 //		sprintf(hexc, "%02X", Text[i]);
 //		strcat(hex_data, hexc);
 //	}
