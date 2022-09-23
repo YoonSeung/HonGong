@@ -48,15 +48,15 @@
 ////	char *H2T_str = (char*)calloc(test_str_len +1, sizeof(char));
 ////
 ////	printf("원문 ---> %s\n", test_str);
-////	printf("크기 ---> %d\n", test_str_len / sizeof(test_str));
+////	
 ////
 ////	T2H_func(test_str, test_str_len, T2H_str);
 ////	printf("T2H ---> %s\n", T2H_str);
-////	printf("크기 ---> %d\n", strlen(T2H_str) / sizeof(T2H_str));
+////	
 ////
 ////	H2T_func(T2H_str, H2T_str);
 ////	printf("H2T ---> %s\n", H2T_str);
-////	printf("크기 ---> %d\n", strlen(H2T_str) / sizeof(H2T_str));
+////	
 ////
 ////	free(H2T_str);
 ////	free(T2H_str);

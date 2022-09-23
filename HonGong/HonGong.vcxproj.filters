@@ -27,10 +27,13 @@
     <ClCompile Include="b2H.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="fileB2HandH2B.c">
+    <ClCompile Include="B2H_2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="b2c_del.c">
+    <ClCompile Include="b2H_3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fileB2H_H2B.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
