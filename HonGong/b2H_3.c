@@ -91,6 +91,7 @@ size_t hexs2bin(const char *in_hexs, unsigned char *out_h2b) {
 		out_h2b[i] = (b1 << 4) | b2;
 	}
 
+
 	return len;
 
 }
