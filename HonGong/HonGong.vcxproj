@@ -129,6 +129,7 @@
     <ClCompile Include="B2H_2.c" />
     <ClCompile Include="b2H_3.c" />
     <ClCompile Include="b64.c" />
+    <ClCompile Include="fileB2H_2.c" />
     <ClCompile Include="fileB2H_H2B.c" />
     <ClCompile Include="T2H.c" />
     <ClCompile Include="T2H_input.c" />

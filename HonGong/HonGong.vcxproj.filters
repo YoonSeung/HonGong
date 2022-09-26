@@ -36,5 +36,8 @@
     <ClCompile Include="fileB2H_H2B.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="fileB2H_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

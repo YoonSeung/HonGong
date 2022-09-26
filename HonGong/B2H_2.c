@@ -9,10 +9,6 @@
 ////hex 문자열에 있는 요소하나를 ascii 값으로 바꾸는 함수 
 //int hexchr2bin(const char hex, char *out);
 //
-//
-//
-//
-//
 //int main() {
 //	unsigned char bin_data[] = { 0x01, 0x20 ,0x02, 0x03, 0x20 ,0x64, 0xA0 ,0x00 };
 //	int bin_len = 8;
