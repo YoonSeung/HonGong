@@ -13,7 +13,7 @@ int main() {
 	FILE *Binfp, *Hexfp, *H2Bfp;
 	int result;
 
-	//===== encoding
+	//======= encoding
 	Binfp = fopen("4.PNG", "rb");
 
 	if (Binfp == NULL) {
