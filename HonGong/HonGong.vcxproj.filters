@@ -39,5 +39,8 @@
     <ClCompile Include="fileB2H_2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="largefile.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

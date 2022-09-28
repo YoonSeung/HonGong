@@ -14,15 +14,15 @@
 //	int result;
 //
 //	//======= encoding
-//	Binfp = fopen("4.PNG", "rb");
+//	Binfp = fopen("bin.exe", "rb");
 //
 //	if (Binfp == NULL) {
-//		printf("Binfile open fail");
+//		printf("Binfile open failed\n");
 //		exit(1);
 //	}
 //
-//	Hexfp = fopen("Hex2Png.PNG", "wb");
-//	result= fileB2H(Binfp, Hexfp);
+//	Hexfp = fopen("B2H.exe", "wb");
+//	result = fileB2H(Binfp, Hexfp);
 //
 //	if (result != 1) {
 //		printf("encoding err \n");
@@ -30,27 +30,27 @@
 //	}
 //
 //	//===== decoding
-//	Hexfp = fopen("Hex2Png.PNG", "rb");
+//	Hexfp = fopen("B2H.exe", "rb");
 //
 //	if (Hexfp == NULL) {
-//		printf("hexfile read err");
+//		printf("hexfile open failed\n");
 //		exit(1);
 //	}
-//	H2Bfp = fopen("H2B_success.PNG", "wb");
+//	H2Bfp = fopen("H2B_success.exe", "wb");
 //	result = fileH2B(Hexfp, H2Bfp);
 //
 //	if (result != 1) {
 //		printf("decoding err \n");
 //		exit(1);
 //	}
-//	
+//
 //}
 //
 ////File Bin -> Hex 함수
 //int fileB2H(FILE *in_binfile, FILE *out_hexfile) {
 //	int count;
-//	unsigned char buffer[5] = { 0, };
-//	char hexbuffer[11] = { 0, };
+//	unsigned char buffer[100] = { 0, };
+//	char hexbuffer[201] = { 0, };
 //
 //	while (!feof(in_binfile)) {
 //
@@ -87,14 +87,14 @@
 //
 ////File Hex -> bin 함수
 //int fileH2B(FILE *in_hexfile, FILE *out_B2Hbinfile) {
-//	int readcnt,count;
-//	unsigned char buffer[5] = { 0, };
-//	char hexbuffer[11] = { 0, };
+//	int readcnt, count;
+//	unsigned char buffer[100] = { 0, };
+//	char hexbuffer[201] = { 0, };
 //
 //	while (!feof(in_hexfile)) {
 //		readcnt = fread(hexbuffer, sizeof(char), 10, in_hexfile);
-//		
-//		if(readcnt % 2 == 0){
+//
+//		if (readcnt % 2 == 0) {
 //
 //			count = hexs2bin(hexbuffer, buffer);
 //
@@ -108,7 +108,7 @@
 //			fclose(in_hexfile);
 //			fclose(out_B2Hbinfile);
 //			exit(1);
-//		}		
+//		}
 //	}
 //	printf("file decoding success\n");
 //	fclose(in_hexfile);
@@ -124,7 +124,7 @@
 //	char b2;
 //	int i;
 //
-//	if (in_hexs == NULL || *in_hexs == '\0') 
+//	if (in_hexs == NULL || *in_hexs == '\0')
 //		return 0;
 //
 //	if (len % 2 != 0) {

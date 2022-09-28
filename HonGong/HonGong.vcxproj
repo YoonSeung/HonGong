@@ -131,6 +131,7 @@
     <ClCompile Include="b64.c" />
     <ClCompile Include="fileB2H_2.c" />
     <ClCompile Include="fileB2H_H2B.c" />
+    <ClCompile Include="largefile.c" />
     <ClCompile Include="T2H.c" />
     <ClCompile Include="T2H_input.c" />
   </ItemGroup>
