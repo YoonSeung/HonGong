@@ -42,6 +42,11 @@ int fileH2B(FILE *in_hexfile, FILE *out_H2B_binfile) {
 			return -1;
 		}
 	}
+
+	printf("file decoding success\n");
+	fclose(out_H2B_binfile);
+	fclose(in_hexfile);
+
 	return 1;
 }
 

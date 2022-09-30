@@ -8,8 +8,9 @@ int main(int argc, char* argv[]) {
 	in_file = argv[1];
 	write_file = argv[3];
 
-	printf("\n insert file \n");
+	printf("insert file \n");
 	printf("1.infile, 2.B2H or H2B, 3.outfile\n");
+	
 
 	FILE *in_fp = fopen(in_file, "rb");
 
